@@ -15,7 +15,7 @@ const NavBar = () => {
         <a>Courses</a>
       </li>
       <li>
-        <a>Events</a>
+        <a>Teach on EduBridge</a>
       </li>
       <li>
         <a>Blogs</a>
@@ -55,7 +55,7 @@ const NavBar = () => {
           <img className='w-52 h-20' src={logo} alt="Logo" />
         </div>
         <div className="navbar-center hidden lg:flex items-end">
-          <ul className="menu pb-0 menu-horizontal px-1 source-code-pro-class font-semibold text-lg">
+          <ul className="menu pb-0 menu-horizontal px-1 font-sans font-semibold text-lg">
            {navOptions}
           </ul>
         </div>

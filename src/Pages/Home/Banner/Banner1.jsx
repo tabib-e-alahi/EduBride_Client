@@ -4,7 +4,6 @@ import b_img_1 from '../../../assets/Banner/b_img_1.png'
 const Banner1 = () => {
   return (
     <div>
-      {/* source https://github.com/themesberg/landwind */}
       <section className="bg-white dark:bg-[#26507F] source-code-pro-class lg:h-fit">
         <div className="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-0 lg:grid-cols-12 lg:pt-10">
           <div className="mr-auto place-self-center lg:col-span-7">

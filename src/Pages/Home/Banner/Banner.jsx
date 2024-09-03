@@ -1,4 +1,3 @@
-
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,14 +14,15 @@ const Banner = () => {
   return (
     <div className="mb-28">
       <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-        <SwiperSlide><Banner1></Banner1></SwiperSlide>
-        <SwiperSlide><Banner2></Banner2></SwiperSlide>
-        {/* <SwiperSlide><img className=" mx-auto" src={banner3} alt="" /></SwiperSlide>
-        <SwiperSlide><img className=" mx-auto" src={banner2} alt="" /></SwiperSlide>
-        <SwiperSlide><img className=" mx-auto" src={banner3} alt="" /></SwiperSlide>
-        <SwiperSlide><img className=" mx-auto" src={banner1} alt="" /></SwiperSlide>
-        <SwiperSlide><img className=" mx-auto" src={banner2} alt="" /></SwiperSlide>
-        <SwiperSlide><img className=" mx-auto" src={banner3} alt="" /></SwiperSlide> */}
+        <SwiperSlide>
+          <Banner1></Banner1>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Banner2></Banner2>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Banner1></Banner1>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
