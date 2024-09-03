@@ -1,0 +1,15 @@
+/* source code pro fornt link and style  */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+.source-code-pro-class{
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.nav_width{
+    width: 92%;
+    align-items: flex-end;
+}
