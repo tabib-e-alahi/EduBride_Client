@@ -1,0 +1,25 @@
+/* SwiperComponent.css */
+.mySwiper_custom{
+    height: 400px;
+}
+.swiper-pagination__custom {
+    bottom: 0px; /* Position from the bottom */
+    text-align: center; /* Center the pagination */
+  }
+  
+.swiper-pagination-bullet {
+    background: #cfd3d7; /* Default bullet color */
+    width: 20px; /* Bullet width */
+    height: 20px; /* Bullet height */
+    border-radius: 50%;
+    border: 2px solid grey; /* Circular bullets */
+    margin: 0 5px; /* Spacing between bullets */
+    opacity: 1; /* Ensure opacity is set to 1 for visible bullets */
+    transition: #007aff 0.3s, transform 0.3s; /* Smooth transition */
+  }
+  
+.swiper-pagination-bullet-active {
+    background: #F09A0F; /* Active bullet color */
+    transform: scale(1.2); /* Scale up the active bullet */
+  }
+  

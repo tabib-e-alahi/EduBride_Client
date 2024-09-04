@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import './PopularCourse.css'
+
 
 // import required modules
 import { Pagination } from "swiper/modules";
@@ -21,8 +23,8 @@ const PopularCourse = () => {
   }, []);
 
   return (
-    <div className="mb-14  w-11/12 mx-auto">
-        <h1 className="font-bold text-4xl source-code-pro-class mb-8"><span className="text-blue-700">Popular</span> Course</h1>
+    <div className="mb-14 h-[400px]  max-w-7xl lg:px-8 mx-auto">
+        <h1 className="font-bold text-5xl font-sans mb-8"><span className="text-blue-700">Popular</span> Course</h1>
       {
         <Swiper
           slidesPerView={4}
@@ -31,10 +33,10 @@ const PopularCourse = () => {
             clickable: true,
           }}
           modules={[Pagination]}
-          className="mySwiper"
+          className="mySwiper mySwiper_custom "
         >
           {popularCourses.map((p, idx) => (
-            <SwiperSlide>
+            <SwiperSlide key={idx}>
               <SinglePopularCourses key={idx} p={p}></SinglePopularCourses>
             </SwiperSlide>
           ))}
