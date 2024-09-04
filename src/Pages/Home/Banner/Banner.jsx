@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Banner1 from "./Banner1";
 import Banner2 from "./Banner2";
+import Banner3 from "./Banner3";
 
 const Banner = () => {
   return (
@@ -21,7 +22,7 @@ const Banner = () => {
           <Banner2></Banner2>
         </SwiperSlide>
         <SwiperSlide>
-          <Banner1></Banner1>
+          <Banner3></Banner3>
         </SwiperSlide>
       </Swiper>
     </div>
