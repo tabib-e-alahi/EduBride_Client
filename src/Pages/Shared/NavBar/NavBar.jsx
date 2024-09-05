@@ -1,24 +1,25 @@
 import './NavBar.css'
 import logo from '../../../assets/logo.png';
+import { NavLink } from 'react-router-dom';
 
 
 const NavBar = () => {
   const navOptions = (
     <>
       <li>
-        <a>Home</a>
+        <NavLink className="navOptions" to='/'>Home</NavLink>
       </li>
       <li>
-        <a>All Classes</a>
+        <NavLink to="/allClasses">All Classes</NavLink>
       </li>
       <li>
-        <a>Courses</a>
+        <NavLink to="/courses">Courses</NavLink>
       </li>
       <li>
-        <a>Teach on EduBridge</a>
+        <NavLink to="/teach">Teach on EduBridge</NavLink>
       </li>
       <li>
-        <a>Blogs</a>
+        <NavLink to="/blogs">Blogs</NavLink>
       </li>
     </>
   );

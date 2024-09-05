@@ -13,3 +13,7 @@
     width: 92%;
     align-items: flex-end;
 }
+
+.navOptions:active{
+  background: whitesmoke !important;
+}
