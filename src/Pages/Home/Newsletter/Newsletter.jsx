@@ -2,7 +2,7 @@
 
 const Newsletter = () => {
     return (
-        <div className="relative w-10/12 mx-auto overflow-hidden rounded  bg-gray-900 py-16 sm:py-10 my-10 ">
+        <div className=" relative w-10/12 mx-auto overflow-hidden rounded  bg-gray-900 py-16 sm:py-10 my-10 ">
         <div className="mx-auto w-full px-6 lg:px-8">
           <div className="mx-auto w-full grid  grid-cols-1 gap-x-8 gap-y-16  lg:grid-cols-2">
             <div className="flex flex-col justify-center mx-auto">
@@ -93,3 +93,7 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+
+
+
+// [background:linear-gradient(theme(colors.slate.900),theme(colors.slate.900))_padding-box,linear-gradient(45deg,theme(colors.slate.800),theme(colors.slate.600/.8),theme(colors.slate.800))_border-box] relative before:absolute before:inset-0 before:bg-[url('./noise.png')] before:bg-[length:352px_382px] before:rounded-[inherit] rounded-2xl border border-transparent 
