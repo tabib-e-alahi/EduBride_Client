@@ -2,7 +2,7 @@
   {
     "course_title": "Introduction to Web Development",
     "about_this_course": "This course provides an introduction to the basics of web development. Students will learn about HTML, CSS, and JavaScript, the core technologies used to build websites. By the end of the course, learners will have created their own simple website. This course is designed for those who have no prior experience in web development, making it the perfect start for beginners looking to enter the field.",
-    "cover_image": "https://example.com/images/web-development.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 0,
     "category": "Web Development",
     "course_learning": [
@@ -33,7 +33,7 @@
   {
     "course_title": "Advanced JavaScript Concepts",
     "about_this_course": "This course is designed for intermediate learners who are already familiar with JavaScript basics and want to dive deeper into advanced topics like closures, callbacks, and asynchronous programming. Students will learn how to build more complex applications using modern JavaScript frameworks and libraries.",
-    "cover_image": "https://example.com/images/advanced-javascript.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 150,
     "category": "Programming",
     "course_learning": [
@@ -70,7 +70,7 @@
   {
     "course_title": "Data Science with Python",
     "about_this_course": "This comprehensive course covers the fundamentals of data science using Python. Students will explore data analysis, manipulation, and visualization techniques, using libraries like NumPy, pandas, and Matplotlib. The course also introduces machine learning concepts, making it an excellent choice for those looking to pursue a career in data science.",
-    "cover_image": "https://example.com/images/data-science-python.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 0,
     "category": "Data Science",
     "course_learning": [
@@ -101,7 +101,7 @@
   {
     "course_title": "Introduction to Graphic Design",
     "about_this_course": "This beginner-friendly course introduces students to the principles of graphic design. Learners will explore color theory, typography, and layout design using popular design software. By the end of the course, students will be able to create visually appealing designs for personal or professional use.",
-    "cover_image": "https://example.com/images/graphic-design.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 100,
     "category": "Design",
     "course_learning": [
@@ -132,7 +132,7 @@
   {
     "course_title": "Full Stack Web Development",
     "about_this_course": "This full-stack web development course covers both front-end and back-end technologies, providing students with the skills needed to build complete web applications. Learners will work with HTML, CSS, JavaScript, React, Node.js, and MongoDB. The course is designed for individuals looking to develop comprehensive knowledge in web development.",
-    "cover_image": "https://example.com/images/fullstack-development.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 0,
     "category": "Web Development",
     "course_learning": [
@@ -166,7 +166,7 @@
   {
     "course_title": "Cybersecurity Basics",
     "about_this_course": "In this beginner-friendly cybersecurity course, students will learn the essentials of protecting systems and data from cyber threats. Topics include network security, encryption, and threat detection. By the end of the course, learners will have a foundational understanding of cybersecurity practices.",
-    "cover_image": "https://example.com/images/cybersecurity.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 120,
     "category": "Cybersecurity",
     "course_learning": [
@@ -197,7 +197,7 @@
   {
     "course_title": "Machine Learning Mastery",
     "about_this_course": "This advanced course on machine learning dives into algorithm development, data modeling, and the application of machine learning frameworks. Students will gain hands-on experience with popular tools like TensorFlow and Scikit-Learn, preparing them to tackle real-world problems using machine learning techniques.",
-    "cover_image": "https://example.com/images/machine-learning.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 200,
     "category": "Artificial Intelligence",
     "course_learning": [
@@ -231,7 +231,7 @@
   {
     "course_title": "Digital Marketing Essentials",
     "about_this_course": "This course covers the fundamentals of digital marketing, including SEO, social media marketing, email campaigns, and analytics. Designed for all levels, learners will be able to craft digital marketing strategies that drive results, making it ideal for small business owners, marketing professionals, and entrepreneurs.",
-    "cover_image": "https://example.com/images/digital-marketing.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 80,
     "category": "Marketing",
     "course_learning": [
@@ -262,7 +262,7 @@
   {
     "course_title": "iOS App Development with Swift",
     "about_this_course": "In this intermediate-level course, students will learn how to develop iOS applications using the Swift programming language. The course covers the fundamentals of app design, user interface building, and integrating APIs. By the end of the course, students will have built a fully functional iOS app.",
-    "cover_image": "https://example.com/images/ios-development.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 130,
     "category": "Mobile Development",
     "course_learning": [
@@ -296,7 +296,7 @@
   {
     "course_title": "Photography Fundamentals",
     "about_this_course": "This beginner-level photography course introduces students to the essential skills needed to capture stunning images. Learners will explore composition, lighting, and camera settings, as well as tips for editing photos to create visually appealing results. Perfect for aspiring photographers looking to enhance their skills.",
-    "cover_image": "https://example.com/images/photography-fundamentals.jpg",
+    "cover_image": "https://i.ibb.co.com/Xy4v374/web-development.jpg",
     "price": 0,
     "category": "Photography",
     "course_learning": [
