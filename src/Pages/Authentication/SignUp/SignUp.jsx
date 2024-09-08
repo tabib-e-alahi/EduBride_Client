@@ -50,8 +50,7 @@ const SignUp = () => {
                   <button className="px-6 py-3  uppercase font-medium  rounded-sm text-white w-full bg-[#a6776a]">
                     SignUp
                   </button>
-                </div>
-
+                </div> 
               </div>
             </form>
 
