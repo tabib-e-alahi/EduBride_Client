@@ -33,7 +33,7 @@ const SignUp = () => {
                     name="name"
                     className={`p-3 rounded-md form-input placeholder:text-gray-600 ${
                       errors.name
-                        ? "error-input-border  shadow-inner shadow-red-300"
+                        ? "error-input-border shadow-inner shadow-red-300"
                         : " input-border"
                     }`}
                     placeholder={`${
@@ -80,7 +80,7 @@ const SignUp = () => {
                   <button className="px-6 py-3  uppercase font-medium  rounded-sm text-white w-full bg-[#a6776a]">
                     SignUp
                   </button>
-                </div> 
+                </div>
               </div>
             </form>
 
