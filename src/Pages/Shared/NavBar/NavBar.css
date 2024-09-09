@@ -1,12 +1,14 @@
-/* source code pro fornt link and style  */
-
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-.source-code-pro-class{
-  font-family: "Source Code Pro", monospace;
+
+.noto-sans-font {
+  font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
+  font-weight: 400;
   font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .nav_width{
@@ -14,8 +16,11 @@
     align-items: flex-end;
 }
 
-.navOptions:active{
-  background: whitesmoke !important;
+.navOptions > .active{
+  background: transparent !important;
+  color: black !important;
+  font-size: larger !important;
+  font-weight: 700 !important;
 }
 
 
@@ -24,7 +29,7 @@
 
 /* CSS */
 .login_btn {
-  background-color: #FFFFFF;
+  background-color: #5CE683;
   border: 1px solid rgb(209,213,219);
   border-radius: .2rem;
   box-sizing: border-box;

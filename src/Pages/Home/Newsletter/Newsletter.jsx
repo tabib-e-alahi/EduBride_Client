@@ -2,7 +2,7 @@
 
 const Newsletter = () => {
     return (
-        <div className=" relative w-10/12 mx-auto overflow-hidden rounded  bg-gray-900 py-16 sm:py-10 my-10 ">
+        <div className="noto-sans-font relative w-10/12 mx-auto overflow-hidden rounded  bg-gray-900 py-16 sm:py-10 my-10 ">
         <div className="mx-auto w-full px-6 lg:px-8">
           <div className="mx-auto w-full grid  grid-cols-1 gap-x-8 gap-y-16  lg:grid-cols-2">
             <div className="flex flex-col justify-center mx-auto">

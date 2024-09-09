@@ -23,7 +23,7 @@ const PopularCourse = () => {
   }, []);
 
   return (
-    <div className="mb-14 h-[400px]  max-w-7xl lg:px-8 mx-auto">
+    <div className="mb-14 h-[420px]  max-w-7xl lg:px-8 mx-auto">
         <h1 className="font-bold text-5xl font-sans mb-8"><span className="text-blue-700">Popular</span> Course</h1>
       {
         <Swiper

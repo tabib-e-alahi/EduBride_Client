@@ -5,6 +5,7 @@ import OurPartners from "../OurPartners/OurPartners";
 import PopularCourse from "../PopularCourse/PopularCourse";
 import { Helmet } from 'react-helmet-async';
 import Testimonials from "../Testimonials/Testimonials";
+import StatsSection from "../StatsSection/StatsSection";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <BecomeInstructor></BecomeInstructor>
       <Newsletter></Newsletter>
       <Testimonials></Testimonials>
+      <StatsSection></StatsSection>
     </div>
   );
 };
