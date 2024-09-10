@@ -87,12 +87,25 @@ const NavBar = () => {
           </div>
           <div className="navbar-end space-x-4">
             {user ? (
-              <button
-                onClick={handleLogOut}
-                className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
-              >
-                Log Out
-              </button>
+              <>
+                <button
+                  onClick={handleLogOut}
+                  className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                >
+                  Log Out
+                </button>
+                {user?.photoURL ? (
+                  <img
+                    alt="Profile Image"
+                    className="w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-100 dark:ring-violet-600 dark:ring-offset-gray-100"
+                    src={user?.photoURL}
+                  />
+                ) : (
+                  <p className="size-10 flex justify-center items-center text-xl font-bold text-white rounded-full  bg-[#f60]">
+                    {user?.displayName[0]}
+                  </p>
+                )}
+              </>
             ) : (
               <>
                 <Link

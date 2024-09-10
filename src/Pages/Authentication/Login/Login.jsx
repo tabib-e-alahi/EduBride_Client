@@ -92,7 +92,7 @@ const Login = () => {
                 </div>
 
                 <div className="w-2/3 mx-auto text-center">
-                  <button className="px-6 py-3  uppercase font-medium  rounded-sm text-white w-full bg-[#a6776a]">
+                  <button className="flex-none rounded-sm bg-indigo-500 w-full  py-2 text-lg font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                     Login
                   </button>
                 </div>
