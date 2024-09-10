@@ -7,8 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import './PopularCourse.css'
-
+import "./PopularCourse.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
@@ -23,25 +22,29 @@ const PopularCourse = () => {
   }, []);
 
   return (
-    <div className="mb-14 h-[420px]  max-w-7xl lg:px-8 mx-auto">
-        <h1 className="font-bold text-5xl font-sans mb-8"><span className="text-blue-700">Popular</span> Course</h1>
-      {
-        <Swiper
-          slidesPerView={4}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper mySwiper_custom "
-        >
-          {popularCourses.map((p, idx) => (
-            <SwiperSlide key={idx}>
-              <SinglePopularCourses key={idx} p={p}></SinglePopularCourses>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      }
+    <div className="  ">
+      <div className=" max-w-7xl lg:p-8 mx-auto bg-white rounded-xl">
+        <h1 className="font-bold text-5xl font-sans mb-8 text-center">
+          <span className="text-indigo-600 ">Popular</span> Courses
+        </h1>
+        {
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            className="mySwiper mySwiper_custom "
+          >
+            {popularCourses.map((p, idx) => (
+              <SwiperSlide key={idx}>
+                <SinglePopularCourses key={idx} p={p}></SinglePopularCourses>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        }
+      </div>
     </div>
   );
 };

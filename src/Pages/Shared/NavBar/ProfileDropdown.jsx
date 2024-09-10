@@ -1,8 +1,8 @@
-import React from "react";
+
 
 const ProfileDropdown = () => {
   return (
-    <div className="h-full p-3 space-y-2 w-60 bg-gray-900 dark:bg-gray-50 text-gray-100 dark:text-gray-800">
+    <div className="h-full p-3 space-y-2 w-60 bg-gray-900 dark:bg-gray-200 text-gray-100 dark:text-gray-800">
       <div className="flex items-center p-2 space-x-4">
         <img
           src="https://source.unsplash.com/100x100/?portrait"
