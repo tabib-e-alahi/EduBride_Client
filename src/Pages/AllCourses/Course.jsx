@@ -2,7 +2,7 @@
 
 const Course = ({course}) => {
  
-    console.log(course?.lectures);
+    // console.log(course?.lectures);
     return (
         <div>
             <h1>{course?.lectures}</h1>

@@ -1,6 +1,17 @@
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 
 const ProfileDropdown = () => {
+  const {logOut} = useContext(AuthContext);
+
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div className="h-full p-3 space-y-2 w-60 bg-gray-900 dark:bg-gray-200 text-gray-100 dark:text-gray-800">
       <div className="flex items-center p-2 space-x-4">
@@ -128,6 +139,7 @@ const ProfileDropdown = () => {
           </li>
           <li>
             <a
+            onClick={handleLogOut}
               rel="noopener noreferrer"
               href="#"
               className="flex items-center p-2 space-x-3 rounded-md"

@@ -6,13 +6,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import ProfileDropdown from "./ProfileDropdown";
 
 const NavBar = () => {
-  const { user, logOut } = useContext(AuthContext);
-
-  const handleLogOut = () => {
-    logOut()
-      .then(() => {})
-      .catch((error) => console.log(error));
-  };
+  const { user } = useContext(AuthContext);
 
   const navOptions = (
     <>
@@ -47,7 +41,7 @@ const NavBar = () => {
   return (
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
-      <div className="py-3">
+      <div className="py-3 shadow-md bg-white shadow-gray-400">
         <div className="navbar nav_width mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
@@ -88,13 +82,15 @@ const NavBar = () => {
           </div>
           <div className="navbar-end space-x-4">
             {user ? (
-              <details className=" dropdown dropdown-bottom dropdown-end">
+              <details className="dropdown dropdown-bottom dropdown-end">
                 {user?.photoURL ? (
-                  <summary className="btn"><img
-                  alt="Profile Image"
-                  className=" w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-100 dark:ring-violet-600 dark:ring-offset-gray-100"
-                  src={user?.photoURL}
-                /></summary>
+                  <summary className="btn">
+                    <img
+                      alt="Profile Image"
+                      className=" w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-100 dark:ring-violet-600 dark:ring-offset-gray-100"
+                      src={user?.photoURL}
+                    />
+                  </summary>
                 ) : (
                   <summary className="btn hover:bg-[#f60] size-12 flex justify-center items-center text-xl font-bold text-white rounded-full  bg-[#f60]">
                     {user?.displayName[0]}
@@ -108,13 +104,13 @@ const NavBar = () => {
               <>
                 <Link
                   to="/login"
-                  className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                  className="flex-none border-2 border-indigo-500 px-3.5 py-2  font-semibold text-indigo-500 shadow-sm hover:bg-indigo-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                 >
                   Log in
                 </Link>
                 <Link
                   to="/signUp"
-                  className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                  className="flex-none  bg-indigo-500 px-3.5 py-2.5  font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                 >
                   Sign Up
                 </Link>

@@ -1,5 +1,5 @@
 import { Rating } from "@smastrom/react-rating";
-
+import { FaLongArrowAltRight } from "react-icons/fa";
 import "@smastrom/react-rating/style.css";
 
 const SinglePopularCourses = ({ p }) => {
@@ -40,8 +40,8 @@ const SinglePopularCourses = ({ p }) => {
         <p className="text-sm">{author}</p>
       </div>
       <div className="bg-[#F9F9FA] py-2 flex justify-center border-x border-gray-300 border-b rounded-b-xl">
-        <button className="flex-none rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
-          See Details ==
+        <button className="flex-none rounded-sm bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+          See Details <FaLongArrowAltRight className="inline-flex" />
         </button>
       </div>
     </div>
