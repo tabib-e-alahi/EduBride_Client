@@ -23,10 +23,11 @@ const PopularCourse = () => {
 
   return (
     <div className="  ">
-      <div className=" max-w-7xl lg:p-8 mx-auto bg-white rounded-xl">
-        <h1 className="font-bold text-5xl font-sans mb-8 text-center">
+      <div className="max-w-7xl lg:py-10 mx-auto bg-white shadow-md rounded-xl">
+        <h1 className=" font-bold text-5xl font-sans mb-8 text-center">
           <span className="text-indigo-600 ">Popular</span> Courses
         </h1>
+        <div className="w-11/12 mx-auto">
         {
           <Swiper
             slidesPerView={4}
@@ -44,6 +45,7 @@ const PopularCourse = () => {
             ))}
           </Swiper>
         }
+        </div>
       </div>
     </div>
   );
