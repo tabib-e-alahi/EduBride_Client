@@ -11,8 +11,8 @@ const NavBar = () => {
 
   const navOptions = (
     <>
-      <li className="navOptions">
-        <NavLink className="  " to="/">
+      <li className="navOptions ">
+        <NavLink className="" to="/">
           Home
         </NavLink>
       </li>
@@ -42,7 +42,7 @@ const NavBar = () => {
   return (
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
-      <div className="shadow-md bg-white border-b shadow-gray-400">
+      <div className="shadow-md bg-white  border-b shadow-gray-400 fixed z-10 w-full">
         <div className="navbar nav_width mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
@@ -73,11 +73,10 @@ const NavBar = () => {
                 {navOptions}
               </ul>
             </div>
-            {/* <a className=" font-bold text-3xl">KnowYourTutor</a> */}
-            <img className="w-52 h-12" src={eduBridge} alt="Logo" />
+            <Link to='/'><img className="w-52 h-12" src={eduBridge} alt="Logo" /></Link>
           </div>
           <div className="navbar-center hidden lg:flex items-end">
-            <ul className="menu pb-0 menu-horizontal px-1 noto-sans-font text-[15px]">
+            <ul className="menu pb-0 menu-horizontal px-1 noto-sans-font text-[15px] ">
               {navOptions}
             </ul>
           </div>
@@ -105,13 +104,13 @@ const NavBar = () => {
               <>
                 <Link
                   to="/login"
-                  className="flex-none border-2 border-indigo-500 px-3.5 py-2  font-semibold text-indigo-500 shadow-sm hover:bg-indigo-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                  className="flex-none text-lg border-2 border-[#0097b2] px-3.5 py-2 rounded-sm font-bold text-[#0097b2] shadow-sm hover:bg-[#0097b2] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0097b2]"
                 >
-                  Log in
+                  Log In
                 </Link>
                 <Link
                   to="/signUp"
-                  className="flex-none  bg-[#0097b2] px-3.5 py-2.5  font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                  className="flex-none text-lg bg-[#0097b2] px-3.5 py-2.5  font-semibold text-white shadow-sm hover:bg-[#2c6874] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0097b2]"
                 >
                   Sign Up
                 </Link>

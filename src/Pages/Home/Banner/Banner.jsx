@@ -13,8 +13,8 @@ import Banner3 from "./Banner3";
 
 const Banner = () => {
   return (
-    <div className="mb-28">
-      <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
+    <div className="mb-28 pt-20 rounded-xl max-w-7xl mx-auto ">
+      <Swiper pagination={true} modules={[Pagination]} className="mySwiper  h-fit">
         <SwiperSlide>
           <Banner1></Banner1>
         </SwiperSlide>

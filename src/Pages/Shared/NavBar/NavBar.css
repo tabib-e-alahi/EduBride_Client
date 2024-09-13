@@ -16,49 +16,10 @@
     align-items: flex-end;
 }
 
-.navOptions > .active{
-  background: transparent !important;
+.navOptions,.navOptions>.active,.navOptions:hover{
+  background: white !important;
   color: black !important;
-  font-size: larger !important;
-  font-weight: 700 !important;
-}
-
-
-/* ============== login button styles ==================== */
-
-
-/* CSS */
-.login_btn {
-  background-color: #5CE683;
-  border: 1px solid rgb(209,213,219);
-  border-radius: .2rem;
-  box-sizing: border-box;
-  color: #111827;
-  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.25rem;
-  padding: 10px 16.182px;
-  text-align: center;
-  text-decoration: none #D1D5DB solid;
-  text-decoration-thickness: auto;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.login_btn:hover {
-  background-color: #4B5563;
-  color: white;
-}
-
-.login_btn:focus {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.login_btn:focus-visible {
-  box-shadow: none;
+  /* font-size: larger !important; */
+  font-weight: 600 !important;
+  
 }

@@ -4,10 +4,10 @@ import b_img_2 from "../../../assets/Banner/b_img_2.png";
 const Banner2 = () => {
   return (
     <div>
-      <section className="bg-white dark:bg-[#DAE4F7] source-code-pro-class lg:h-fit">
-        <div className="grid  max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-0 lg:grid-cols-12 lg:pt-10">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-serif font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl dark:text-slate-800">
+      <section className="bg-white dark:bg-[#DAE4F7]  lg:h-fit rounded-xl">
+        <div className="grid  w-11/12 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-0 lg:grid-cols-12 lg:pt-4">
+          <div className="mr-auto place-self-center justify-center lg:col-span-7">
+            <h1 className="max-w-2xl mb-4 text-4xl font-serif font-extrabold leading-none tracking-tight md:text-5xl dark:text-slate-800">
               Say Goodbye to
               <br />
               Heavy Books: <br />
@@ -25,8 +25,8 @@ const Banner2 = () => {
               </Link>
             </div>
           </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex  justify-center">
-            <img className="lg:h-[612px]" src={b_img_2} alt="hero image" />
+          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex  justify-end">
+            <img className="lg:h-[400px]" src={b_img_2} alt="hero image" />
           </div>
         </div>
       </section>
