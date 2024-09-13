@@ -1,5 +1,6 @@
 import "./NavBar.css";
 import logo from "../../../assets/logo.png";
+import eduBridge from '../../../assets/eduBridge.png'
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
@@ -41,7 +42,7 @@ const NavBar = () => {
   return (
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
-      <div className="py-3 shadow-md bg-white shadow-gray-400">
+      <div className="shadow-md bg-white border-b shadow-gray-400">
         <div className="navbar nav_width mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
@@ -73,7 +74,7 @@ const NavBar = () => {
               </ul>
             </div>
             {/* <a className=" font-bold text-3xl">KnowYourTutor</a> */}
-            <img className="w-40 h-16" src={logo} alt="Logo" />
+            <img className="w-52 h-12" src={eduBridge} alt="Logo" />
           </div>
           <div className="navbar-center hidden lg:flex items-end">
             <ul className="menu pb-0 menu-horizontal px-1 noto-sans-font text-[15px]">
@@ -110,7 +111,7 @@ const NavBar = () => {
                 </Link>
                 <Link
                   to="/signUp"
-                  className="flex-none  bg-indigo-500 px-3.5 py-2.5  font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                  className="flex-none  bg-[#0097b2] px-3.5 py-2.5  font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
                 >
                   Sign Up
                 </Link>
