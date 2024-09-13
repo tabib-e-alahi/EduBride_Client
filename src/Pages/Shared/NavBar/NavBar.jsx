@@ -42,7 +42,7 @@ const NavBar = () => {
   return (
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
-      <div className="shadow-md bg-white  border-b shadow-gray-400 fixed z-10 w-full">
+      <div className="shadow-md bg-white  border-b shadow-gray-400 fixed z-10 top-0 w-full">
         <div className="navbar nav_width mx-auto">
           <div className="navbar-start">
             <div className="dropdown">

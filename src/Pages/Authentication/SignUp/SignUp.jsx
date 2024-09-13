@@ -30,7 +30,7 @@ const SignUp = () => {
           console.log("User profile Updated");
           reset();
           Swal.fire({
-            position: "top-end",
+            position: "center",
             icon: "success",
             title: `Welcomee to eduBridge '${data?.name.split(" ")[0]}'`,
             showConfirmButton: false,

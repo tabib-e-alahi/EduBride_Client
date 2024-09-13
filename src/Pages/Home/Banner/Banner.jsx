@@ -13,7 +13,8 @@ import Banner3 from "./Banner3";
 
 const Banner = () => {
   return (
-    <div className=" pt-24 rounded-xl max-w-7xl mx-auto ">
+    <div className="bg-[#FAF9FE] pb-10 pt-24">
+      <div className="max-w-7xl mx-auto ">
       <Swiper
         pagination={true}
         autoplay={{
@@ -22,7 +23,7 @@ const Banner = () => {
           pauseOnMouseEnter: true,
         }}
         modules={[Pagination, Autoplay]}
-        className="mySwiper  h-fit rounded-xl"
+        className="mySwiper  h-fit rounded-md"
       >
         <SwiperSlide>
           <Banner1></Banner1>
@@ -34,6 +35,7 @@ const Banner = () => {
           <Banner3></Banner3>
         </SwiperSlide>
       </Swiper>
+    </div>
     </div>
   );
 };

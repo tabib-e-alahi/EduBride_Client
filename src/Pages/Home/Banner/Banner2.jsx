@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import b_img_2 from "../../../assets/Banner/b_img_2.png";
+import 'animate.css';
 
 const Banner2 = () => {
   return (
     <div>
-      <section className="bg-white dark:bg-[#DAE4F7]  lg:h-fit rounded-xl">
+      <section className="bg-white dark:bg-[#DAE4F7]  lg:h-fit rounded-md">
         <div className="grid  w-11/12 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:pb-0 lg:grid-cols-12 lg:pt-4">
           <div className="mr-auto place-self-center justify-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-serif font-extrabold leading-none tracking-tight md:text-5xl dark:text-slate-800">
+            <h1 className="animate__animated animate__lightSpeedInLeft max-w-2xl mb-4 text-4xl font-serif font-extrabold leading-none tracking-tight md:text-5xl dark:text-slate-800">
               Say Goodbye to
               <br />
               Heavy Books: <br />
