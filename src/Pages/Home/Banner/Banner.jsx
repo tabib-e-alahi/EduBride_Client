@@ -13,7 +13,7 @@ import Banner3 from "./Banner3";
 
 const Banner = () => {
   return (
-    <div className="mb-28 pt-24 rounded-xl max-w-7xl mx-auto ">
+    <div className=" pt-24 rounded-xl max-w-7xl mx-auto ">
       <Swiper
         pagination={true}
         autoplay={{

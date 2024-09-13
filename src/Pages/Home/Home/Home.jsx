@@ -9,7 +9,7 @@ import StatsSection from "../StatsSection/StatsSection";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="space-y-40">
        <Helmet>
         <title>EduBridge | Home</title>
       </Helmet>
