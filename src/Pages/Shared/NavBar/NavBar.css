@@ -15,7 +15,7 @@
 
 .navOptions,
 .navOptions > .active {
-  background: white !important;
+  background: none !important;
   color: black !important;
   font-size: medium !important;
   font-weight: 600 !important;

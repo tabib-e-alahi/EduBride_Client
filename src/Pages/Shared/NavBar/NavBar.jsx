@@ -1,6 +1,6 @@
 import "./NavBar.css";
 import logo from "../../../assets/logo.png";
-import eduBridge from '../../../assets/eduBridge.png'
+import new_logo from '../../../assets/new_logo.png'
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
@@ -42,7 +42,7 @@ const NavBar = () => {
   return (
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
-      <div className="shadow-md bg-white  border-b shadow-gray-400 fixed z-10 top-0 w-full">
+      <div className=" shadow-md bg-white bg-opacity-90 bg-blend-hard-light  fixed z-40 top-0 w-full">
         <div className="navbar nav_width mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
@@ -73,7 +73,7 @@ const NavBar = () => {
                 {navOptions}
               </ul>
             </div>
-            <Link to='/'><img className="w-52 h-12" src={eduBridge} alt="Logo" /></Link>
+            <Link to='/'><img className="w-44 h-16" src={new_logo} alt="Logo" /></Link>
           </div>
           <div className="navbar-center hidden lg:flex items-end">
             <ul className="menu pb-0 menu-horizontal px-1 noto-sans-font text-[15px] ">
