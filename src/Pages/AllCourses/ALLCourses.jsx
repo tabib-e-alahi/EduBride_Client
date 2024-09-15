@@ -9,7 +9,7 @@ const ALLCourses = () => {
   const [checkedCategories, setCheckedCategories] = useState([]);
   const location = useLocation();
   useEffect(() => {
-    fetch("./allCourses.json")
+    fetch("http://localhost:5000/allcourses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);

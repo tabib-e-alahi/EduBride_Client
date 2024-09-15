@@ -7,6 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import Testimonials from "../Testimonials/Testimonials";
 import StatsSection from "../StatsSection/StatsSection";
 
+
 const Home = () => {
   return (
     <div className="space-y-16 ">
@@ -20,6 +21,7 @@ const Home = () => {
       <Newsletter></Newsletter>
       <Testimonials></Testimonials>
       <StatsSection></StatsSection>
+    
     </div>
   );
 };
