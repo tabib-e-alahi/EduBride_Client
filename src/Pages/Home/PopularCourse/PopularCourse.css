@@ -22,4 +22,8 @@
     background: #F09A0F; /* Active bullet color */
     transform: scale(1.2); /* Scale up the active bullet */
   }
+
+  .popular_bg{
+    background-image: url('./noise.png');
+  }
   

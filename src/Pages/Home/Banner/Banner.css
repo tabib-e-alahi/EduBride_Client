@@ -182,23 +182,34 @@
 } */
 
 
+
+
 .gradient-background {
-    background: linear-gradient(316deg,#dfe3fb,#ece4fb,#8061ec);
-    background-size: 180% 180%;
+    background: url('./banner_img.png'),linear-gradient(316deg, #dfe3fb, #ece4fb, #8061ec);
+    background-size: 110% 110%, cover; /* Gradient animates, image stays fixed */
+    background-position: 0% 50%, center;
     animation: gradient-animation 24s ease infinite;
   }
   
   @keyframes gradient-animation {
     0% {
-      background-position: 0% 50%;
+      background-position: 0% 50%, center; /* Animate only the gradient */
     }
     50% {
-      background-position: 100% 50%;
+      background-position: 100% 50%, center;
     }
     100% {
-      background-position: 0% 50%;
+      background-position: 0% 50%, center;
     }
   }
+  
+
+
+  /* .banner-bg-img{
+    
+    background-repeat: no-repeat;
+    background-position: center;
+  } */
 
 
   .line_class{

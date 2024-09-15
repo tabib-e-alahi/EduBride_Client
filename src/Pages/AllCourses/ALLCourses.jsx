@@ -36,7 +36,7 @@ const ALLCourses = () => {
 
 
   return (
-    <div className="py-24 border-2  border-green-600 max-w-7xl mx-auto">
+    <div className="py-24 border-2  border-green-600 max-w-7xl mx-auto ">
       <RouterLocation routeInfo={location?.pathname}></RouterLocation>
       <h1 className="text-4xl font-bold  text-center">This is All Courses</h1>
 

@@ -23,7 +23,7 @@ const PopularCourse = () => {
 
   return (
     <div className="  ">
-      <div className="max-w-7xl lg:py-10 mx-auto bg-white shadow-md rounded-xl">
+      <div className="max-w-7xl lg:py-6 mx-auto bg-white shadow-md rounded-xl popular_bg">
         <h1 className=" font-bold text-5xl font-sans mb-8 text-center">
           <span className="text-indigo-600 ">Popular</span> Courses
         </h1>

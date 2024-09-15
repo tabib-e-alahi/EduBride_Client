@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
 import banner_image from '../../../assets/banner_image.png'
+// import banner_bg from '../../../assets/banner_bg.png'
 import 'animate.css';
 
 const Banner1 = () => {
   return (
-    <div className='max-w-7xl mx-auto'>
+    <div className="max-w-7xl mx-auto ">
       <section className=" lg:h-fit rounded-md w-11/12 mx-auto">
         <div className="grid  py-8 lg:grid-cols-2 lg:pt-4">
           <div className="mr-auto place-self-center justify-center  w-11/12 ">
@@ -29,7 +30,7 @@ const Banner1 = () => {
           </div>
           <div className="hidden lg:mt-0  lg:flex justify-end">
             <img
-            className='h-full w-full'
+            className='h-fit w-full'
               src={banner_image}
               alt="hero image"
             />
