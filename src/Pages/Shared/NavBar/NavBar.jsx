@@ -1,13 +1,34 @@
 import "./NavBar.css";
 import logo from "../../../assets/logo.png";
-import new_logo from '../../../assets/new_logo.png'
+import new_logo from "../../../assets/new_logo.png";
 import { Link, NavLink } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import ProfileDropdown from "./ProfileDropdown";
 
 const NavBar = () => {
   const { user } = useContext(AuthContext);
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Function to handle the scroll event
+  const handleScroll = () => {
+    // When scrolled more than 100px, show the navbar
+    if (window.scrollY > 100) {
+      setIsScrolled(true);
+    } else {
+      // If scrolled back to the top, reset to transparent navbar
+      setIsScrolled(false);
+    }
+  };
+
+  // useEffect to add the scroll event listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Clean up the event listener
+    };
+  }, []);
 
   const navOptions = (
     <>
@@ -42,7 +63,11 @@ const NavBar = () => {
   return (
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
-      <div className=" shadow-md bg-white bg-opacity-90 bg-blend-hard-light  fixed z-40 top-0 w-full">
+      <div
+        className={`fixed top-0 w-full z-10 transition-all  duration-0 ease-linear transform ${
+          isScrolled ? "translate-y-0 duration-1000 opacity-90 bg-white shadow-lg" : "translate-y-0 opacity-100 bg-transparent"
+        }`}
+      >
         <div className="navbar nav_width mx-auto">
           <div className="navbar-start">
             <div className="dropdown">
@@ -73,9 +98,11 @@ const NavBar = () => {
                 {navOptions}
               </ul>
             </div>
-            <Link to='/'><img className="w-44 h-16" src={new_logo} alt="Logo" /></Link>
+            <Link to="/">
+              <img className="w-44 h-16" src={new_logo} alt="Logo" />
+            </Link>
           </div>
-          <div className="navbar-center hidden lg:flex items-end">
+          <div className="navbar-center hidden lg:flex">
             <ul className="menu pb-0 menu-horizontal px-1 noto-sans-font text-[15px] ">
               {navOptions}
             </ul>

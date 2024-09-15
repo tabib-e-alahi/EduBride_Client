@@ -15,7 +15,7 @@ const Banner2 = () => {
               Find What You Need with Our Notes
             </h1>
 
-            <p className="max-w-2xl mb-6  text-gray-500 lg:mb-8  dark:text-gray-800">
+            <p className="max-w-2xl mb-6  text-gray-900 lg:mb-8  dark:text-gray-800">
               Streamline your study process with our focused notes, designed to
               help you quickly locate key information and make learning more
               efficient. .
