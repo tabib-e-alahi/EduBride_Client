@@ -23,14 +23,14 @@ const PopularCourse = () => {
 
   return (
     <div className="  ">
-      <div className="max-w-7xl lg:py-6 mx-auto bg-white shadow-md rounded-xl popular_bg">
+      <div className="max-w-7xl lg:py-6 mx-auto  bg-white shadow-md rounded-xl popular_bg">
         <h1 className=" font-bold text-5xl font-sans mb-8 text-center">
           <span className="text-indigo-600 ">Popular</span> Courses
         </h1>
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto border-4 h-full border-red-600">
         {
           <Swiper
-            slidesPerView={4}
+            slidesPerView={3}
             spaceBetween={30}
             pagination={{
               clickable: true,
@@ -39,7 +39,7 @@ const PopularCourse = () => {
             className="mySwiper mySwiper_custom "
           >
             {popularCourses.map((p, idx) => (
-              <SwiperSlide key={idx}>
+              <SwiperSlide  key={idx}>
                 <SinglePopularCourses key={idx} p={p}></SinglePopularCourses>
               </SwiperSlide>
             ))}

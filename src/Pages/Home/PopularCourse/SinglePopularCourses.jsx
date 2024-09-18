@@ -25,7 +25,7 @@ const SinglePopularCourses = ({ p }) => {
 
   return (
     <div className="max-w-sm h-full p-4 border bg-white shadow-sm rounded-3xl font-sans  flex flex-col justify-between noto-sans-font">
-      <div>
+      <div className="h-full">
         <div className="flex gap-2 justify-start items-center mb-4 pl-6">
           <img
             className="rounded-full size-6 outline outline-indigo-400 "

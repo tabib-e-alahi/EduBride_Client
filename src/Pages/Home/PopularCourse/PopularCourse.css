@@ -1,21 +1,28 @@
 /* SwiperComponent.css */
 .mySwiper_custom{
-    height: 420px;
+    height: 510px;
+    border: 2px solid blue;
+    background-color: #F09A0F;
+}
+.swiper-slide{
+  border: 2px solid #F09A0F;
+  height: 100%;
+  background-color: blue;
 }
 .swiper-pagination__custom {
     bottom: 0px; /* Position from the bottom */
     text-align: center; /* Center the pagination */
+    background-color: brown;
   }
   
 .swiper-pagination-bullet {
-    background: #cfd3d7; /* Default bullet color */
-    width: 20px; /* Bullet width */
-    height: 20px; /* Bullet height */
+    background: #cfd3d7; 
+    width: 20px; 
+    height: 20px; 
     border-radius: 50%;
-    border: 2px solid grey; /* Circular bullets */
-    margin: 0 5px; /* Spacing between bullets */
-    opacity: 1; /* Ensure opacity is set to 1 for visible bullets */
-    transition: #007aff 0.3s, transform 0.3s; /* Smooth transition */
+    border: 2px solid grey; 
+    opacity: 1; 
+    transition: #007aff 0.3s, transform 0.3s; 
   }
   
 .swiper-pagination-bullet-active {
@@ -23,7 +30,7 @@
     transform: scale(1.2); /* Scale up the active bullet */
   }
 
-  .popular_bg{
+  /* .popular_bg{
     background-image: url('./noise.png');
   }
-  
+   */
