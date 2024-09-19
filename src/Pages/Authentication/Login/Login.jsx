@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { BiSolidError } from "react-icons/bi";
+import rocket_loader from "../../../assets/rocket_loader.json";
 
 const Login = () => {
   const [credintialErrors, setCredintialErrors] = useState(null);
@@ -33,7 +34,7 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen flex items-center bg_custom">
+    <div className=" h-screen flex items-center bg_custom">
       <div className="grid grid-cols-2 login_form_glass  max-w-6xl mx-auto h-5/6  shadow-lg rounded-sm shadow-slate-600">
         <div className="flex justify-center items-center ">
           <img className="w-2/3 mx-auto" src={login} alt="" />

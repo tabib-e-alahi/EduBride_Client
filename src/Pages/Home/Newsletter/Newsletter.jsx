@@ -1,7 +1,7 @@
 const Newsletter = () => {
   return (
     <div className="max-w-6xl py-10 mx-auto  grid  grid-cols-1   lg:grid-cols-2">
-      <div className="flex flex-col justify-center items-start mx-auto w-fit">
+      <div className="flex flex-col justify-center items-start mx-auto">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Subscribe to our newsletter.
         </h2>

@@ -6,7 +6,6 @@ import PopularCourse from "../PopularCourse/PopularCourse";
 import { Helmet } from "react-helmet-async";
 import Testimonials from "../Testimonials/Testimonials";
 import StatsSection from "../StatsSection/StatsSection";
-
 const Home = () => {
   return (
     <div className="space-y-16 ">
