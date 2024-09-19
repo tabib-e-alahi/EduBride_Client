@@ -1,8 +1,25 @@
 import { FcGoogle } from "react-icons/fc";
 import facebook from "../../../assets/facebook.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SocialLogin = () => {
-  const handleGoogleSignIn = () => {};
+  const {googleSignIn} = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const from = location?.state?.from?.pathname || "/";
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+    .then((result) =>{
+      console.log(result.user);
+      navigate(from, { replace: true });
+    })
+  };
+
+
 
   return (
     <div className="flex flex-col justify-center gap-2">
