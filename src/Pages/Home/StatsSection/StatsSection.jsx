@@ -1,6 +1,6 @@
 const StatsSection = () => {
   return (
-    <section className="max-w-7xl mx-auto my-12 bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800">
+    <section className="bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800">
       <div className="container flex flex-col-reverse mx-auto lg:flex-row">
         <div className="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 bg-violet-400 dark:bg-violet-600 text-gray-900 dark:text-gray-50">
           <div className="flex space-x-2 sm:space-x-4">

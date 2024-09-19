@@ -1,8 +1,8 @@
 
 const OurPartners = () => {
   return (
-    <section className="max-w-7xl mx-auto py-10 rounded-xl bg-white shadow-md">
-      <div className="mx-auto w-11/12 ">
+    <section className="py-10 rounded-xl">
+      <div className="mx-auto">
         <div className="mb-10 text-center">
           <span className="text-indigo-600 text-center font-medium mb-2 block">
             OUR PARTNERS

@@ -22,8 +22,8 @@ const PopularCourse = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl lg:py-6 mx-auto  bg-white">
-        <div className="w-11/12 mx-auto h-full">
+    <div className="lg:py-6 mx-auto  bg-white">
+      <div className=" mx-auto h-full">
         <p className="text-xl font-semibold ml-2">Our most</p>
         <h1 className="font-bold text-5xl roboto-mono-font mb-4 ml-1 text-center flex justify-start gap-4">
           <span className="text-indigo-600 flex flex-col gap-0 justify-center items-center">
