@@ -12,7 +12,7 @@ const NavBar = () => {
 
   // ================== navar scroll event handling funtions =================
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 80) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);
@@ -61,7 +61,7 @@ const NavBar = () => {
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
       <div
         className={`fixed top-0  w-full z-10 transition-all py-1  duration-0 ease-linear transform ${
-          isScrolled ? "translate-y-0 duration-1000 opacity-90 bg-white shadow-lg" : "translate-y-0 opacity-100 bg-transparent"
+          isScrolled ? "translate-y-0 duration-700 opacity-90 bg-white shadow-lg" : "translate-y-0 opacity-100 bg-transparent"
         }`}
       >
         <div className="navbar nav_width mx-auto">
@@ -105,12 +105,12 @@ const NavBar = () => {
           </div>
           <div className="navbar-end space-x-4">
             {user ? (
-              <details className="dropdown dropdown-bottom dropdown-end">
+              <details className="dropdown dropdown-bottom dropdown-end ">
                 {user?.photoURL ? (
-                  <summary className="btn">
+                  <summary className="btn bg-transparent hover:bg-transparent">
                     <img
                       alt="Profile Image"
-                      className=" w-10 h-10 rounded-full ring-2 ring-offset-4 dark:bg-gray-100 dark:ring-violet-600 dark:ring-offset-gray-100"
+                      className=" w-10 h-10 rounded-full    dark:ring-violet-600 "
                       src={user?.photoURL}
                     />
                   </summary>
