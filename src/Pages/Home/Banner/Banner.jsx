@@ -14,7 +14,7 @@ import Banner1 from "./Banner1";
 
 const Banner = () => {
   return (
-    <div className="pt-20 h-fit bg-opacity-40  gradient-background banner-bg-img">
+    <div className="pt-32 pb-10 h-fit bg-opacity-40  gradient-background banner-bg-img">
       <Banner1></Banner1>
       {/* <div className="max-w-7xl mx-auto ">
       <Swiper

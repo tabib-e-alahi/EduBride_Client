@@ -60,7 +60,7 @@ const NavBar = () => {
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
       <div
-        className={`fixed top-0 bg-white w-full z-10 transition-all py-1  duration-0 ease-linear transform ${
+        className={`fixed top-0  w-full z-10 transition-all py-1  duration-0 ease-linear transform ${
           isScrolled ? "translate-y-0 duration-1000 opacity-90 bg-white shadow-lg" : "translate-y-0 opacity-100 bg-transparent"
         }`}
       >
@@ -127,7 +127,7 @@ const NavBar = () => {
               <>
                 <Link
                   to="/login"
-                  className="flex-none text-lg border-2 border-[#8c52ff] px-3.5 py-1 rounded-sm font-bold text-[#8c52ff] shadow-sm hover:bg-[#b497ed] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0097b2]"
+                  className="flex-none text-lg border-2 border-[#8c52ff] px-3.5 py-1 rounded-sm font-bold text-[#8c52ff] shadow-sm hover:bg-[#b497ed] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8c52ff]"
                 >
                   Log In
                 </Link>
