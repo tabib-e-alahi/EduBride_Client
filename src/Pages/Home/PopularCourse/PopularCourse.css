@@ -4,24 +4,11 @@
 } */
 .swiper-slide {
   height: max-content;
-}
-.swiper-pagination__custom {
-  bottom: 0px; 
-  text-align: center; 
-}
-
-.swiper-pagination-bullet {
-  background: #cfd3d7;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 2px solid grey;
-  opacity: 1;
-  transition: #007aff 0.3s, transform 0.3s;
 
 }
 
-.swiper-pagination-bullet-active {
-  background: #f09a0f; 
-  transform: scale(1.2); 
+.swiper-button-prev ,.swiper-button-next {
+ font-weight: 900;
+ width: 20px;
 }
+

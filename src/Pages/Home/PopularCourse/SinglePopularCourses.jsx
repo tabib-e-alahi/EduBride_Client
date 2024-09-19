@@ -1,6 +1,8 @@
 import { Rating } from "@smastrom/react-rating";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import "@smastrom/react-rating/style.css";
+import { IoBookOutline } from "react-icons/io5";
+import { SlPeople } from "react-icons/sl";
 
 const SinglePopularCourses = ({ p }) => {
   const {
@@ -48,9 +50,9 @@ const SinglePopularCourses = ({ p }) => {
           <div className="badge mb-3 bg-[#EDF8F9] text-[#17A2B8] rounded-none py-2.5 text-xs px-2.5">
             {author}
           </div>
-          <div className="flex justify-start gap-x-5 text-sm font-semibold text-[#94928e]">
-            <div>{lessons}</div>
-            <div>{enrolled_students} enrolled</div>
+          <div className="flex justify-start gap-x-5 text-[13px] font-semibold text-[#94928e]">
+            <div className="flex gap-1 items-center"><IoBookOutline />{lessons} lessons</div>
+            <div className="flex gap-1 items-center"><SlPeople />{enrolled_students} enrolled</div>
           </div>
           <h5 className="mb-2 text-xl font-bold text-gray-900">{title}</h5>
           <span className="font-medium text-gray-700">

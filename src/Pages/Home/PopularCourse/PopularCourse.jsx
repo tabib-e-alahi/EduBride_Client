@@ -1,16 +1,15 @@
 import { useEffect, useState } from "react";
 import SinglePopularCourses from "./SinglePopularCourses";
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import "./PopularCourse.css";
+import "swiper/css/navigation";
 
 // import required modules
-import { Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 const PopularCourse = () => {
   const [popularCourses, setPopularCourse] = useState([]);
@@ -44,11 +43,9 @@ const PopularCourse = () => {
             <Swiper
               slidesPerView={3}
               spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className="mySwiper mySwiper_custom "
+              navigation={true}
+              modules={[Navigation]}
+              className="mySwiper"
             >
               {popularCourses.map((p, idx) => (
                 <SwiperSlide key={idx}>
