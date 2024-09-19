@@ -1,6 +1,5 @@
 import "./NavBar.css";
-import logo from "../../../assets/logo.png";
-import new_logo from "../../../assets/new_logo.png";
+import logo_black from "../../../assets/logo_black.png";
 import { Link, NavLink } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
@@ -11,22 +10,19 @@ const NavBar = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Function to handle the scroll event
+  // ================== navar scroll event handling funtions =================
   const handleScroll = () => {
-    // When scrolled more than 100px, show the navbar
     if (window.scrollY > 100) {
       setIsScrolled(true);
     } else {
-      // If scrolled back to the top, reset to transparent navbar
       setIsScrolled(false);
     }
   };
 
-  // useEffect to add the scroll event listener
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Clean up the event listener
+      window.removeEventListener("scroll", handleScroll); 
     };
   }, []);
 
@@ -64,7 +60,7 @@ const NavBar = () => {
     <>
       {/* fixed z-50 w-full bg-white bg-opacity-50 */}
       <div
-        className={`fixed top-0 w-full z-10 transition-all  duration-0 ease-linear transform ${
+        className={`fixed top-0 bg-white w-full z-10 transition-all py-1  duration-0 ease-linear transform ${
           isScrolled ? "translate-y-0 duration-1000 opacity-90 bg-white shadow-lg" : "translate-y-0 opacity-100 bg-transparent"
         }`}
       >
@@ -99,7 +95,7 @@ const NavBar = () => {
               </ul>
             </div>
             <Link to="/">
-              <img className="w-44 h-16" src={new_logo} alt="Logo" />
+              <img className="w-44 h-10" src={logo_black} alt="Logo" />
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -131,13 +127,13 @@ const NavBar = () => {
               <>
                 <Link
                   to="/login"
-                  className="flex-none text-lg border-2 border-[#0097b2] px-3.5 py-2 rounded-sm font-bold text-[#0097b2] shadow-sm hover:bg-[#0097b2] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0097b2]"
+                  className="flex-none text-lg border-2 border-[#8c52ff] px-3.5 py-1 rounded-sm font-bold text-[#8c52ff] shadow-sm hover:bg-[#b497ed] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0097b2]"
                 >
                   Log In
                 </Link>
                 <Link
                   to="/signUp"
-                  className="flex-none text-lg bg-[#0097b2] px-3.5 py-2.5  font-semibold text-white shadow-sm hover:bg-[#2c6874] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0097b2]"
+                  className="flex-none text-lg rounded-sm bg-[#8c52ff] px-3.5 py-1.5  font-semibold text-white shadow-sm hover:bg-[#59389d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#8c52ff]"
                 >
                   Sign Up
                 </Link>

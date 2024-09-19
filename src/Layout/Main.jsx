@@ -10,7 +10,7 @@ const Main = () => {
   const onlyHomePage = location.pathname.includes("/");
 
   return (
-    <div className="bg-[#F6F6F6]">
+    <div className="">
       {/* {onlyHomePage && <Promotion></Promotion>} */}
       {noHeaderFooter || <NavBar></NavBar>}
       <Outlet></Outlet>

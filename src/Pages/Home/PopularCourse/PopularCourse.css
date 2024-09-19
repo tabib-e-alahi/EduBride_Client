@@ -1,12 +1,12 @@
 /* SwiperComponent.css */
 .mySwiper_custom{
-    height: 510px;
+    height: 540px;
     border: 2px solid blue;
     background-color: #F09A0F;
 }
 .swiper-slide{
   border: 2px solid #F09A0F;
-  height: 100%;
+  height: max-content;
   background-color: blue;
 }
 .swiper-pagination__custom {

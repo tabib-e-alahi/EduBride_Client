@@ -2,10 +2,10 @@
 
 .noto-sans-font {
   font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
+  font-optical-sizing: inherit;
+  font-weight: 500;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  /* font-variation-settings: "wdth" 100; */
 }
 
 .nav_width {

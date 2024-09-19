@@ -185,7 +185,7 @@
 
 
 .gradient-background {
-    background: url('./banner_img.png'),linear-gradient(316deg, #dfe3fb, #ece4fb, #8061ec);
+    background: url('./banner_img.png'),linear-gradient(156deg, #dfe3fb, #ece4fb, #8061ec);
     background-size: 110% 110%, cover; /* Gradient animates, image stays fixed */
     background-position: 0% 50%, center;
     animation: gradient-animation 24s ease infinite;
