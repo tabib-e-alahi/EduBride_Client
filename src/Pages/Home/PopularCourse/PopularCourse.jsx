@@ -22,29 +22,41 @@ const PopularCourse = () => {
   }, []);
 
   return (
-    <div className="  ">
-      <div className="max-w-7xl lg:py-6 mx-auto  bg-white shadow-md rounded-xl popular_bg">
-        <h1 className=" font-bold text-5xl font-sans mb-8 text-center">
-          <span className="text-indigo-600 ">Popular</span> Courses
+    <div className="max-w-7xl lg:py-6 mx-auto  bg-white">
+        <div className="w-11/12 mx-auto h-full">
+        <p className="text-xl font-semibold ml-2">Our most</p>
+        <h1 className="font-bold text-5xl roboto-mono-font mb-4 ml-1 text-center flex justify-start gap-4">
+          <span className="text-indigo-600 flex flex-col gap-0 justify-center items-center">
+            Popular
+            <svg className="w-fit h-10 -mt-2" viewBox="0 0 450 150">
+              <path
+                d="M10 90 Q 250 10, 490 90"
+                stroke="#FFC107"
+                strokeWidth={15}
+                fill="none"
+              />
+            </svg>
+          </span>
+          Courses
         </h1>
-        <div className="w-11/12 mx-auto border-4 h-full border-red-600">
-        {
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper mySwiper_custom "
-          >
-            {popularCourses.map((p, idx) => (
-              <SwiperSlide  key={idx}>
-                <SinglePopularCourses key={idx} p={p}></SinglePopularCourses>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        }
+        <div className=" ">
+          {
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mySwiper mySwiper_custom "
+            >
+              {popularCourses.map((p, idx) => (
+                <SwiperSlide key={idx}>
+                  <SinglePopularCourses key={idx} p={p}></SinglePopularCourses>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          }
         </div>
       </div>
     </div>
