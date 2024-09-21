@@ -1,4 +1,4 @@
-import logo from '../../../assets/logo.png'
+import logo_black  from '../../../assets/logo_black.png'
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
       </footer>
       <footer className="footer bg-[#F3F7FF] text-base-content border-base-300 border-t px-10 py-4">
         <aside className="grid-flow-row items-center">
-          <img className='w-32 h-16' src={logo} alt="" />
+          <img className='w-28 h-10 lg:w-32 lg:h-16' src={logo_black} alt="" />
           <p>
             Providing reliable educare since {new Date().getFullYear()}
           </p>
