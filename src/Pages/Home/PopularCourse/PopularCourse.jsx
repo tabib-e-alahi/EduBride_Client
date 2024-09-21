@@ -24,7 +24,7 @@ const PopularCourse = () => {
     <div className="lg:py-6 mx-auto  bg-white">
       <div className=" mx-auto h-full">
         <p className="text-xl font-semibold ml-2">Our most</p>
-        <h1 className="font-bold text-5xl roboto-mono-font mb-4 ml-1 text-center flex justify-start gap-4">
+        <h1 className="font-bold text-4xl  lg:text-5xl roboto-mono-font mb-4 ml-1 text-center flex justify-start gap-4">
           <span className="text-indigo-600 flex flex-col gap-0 justify-center items-center">
             Popular
             <svg className="w-fit h-10 -mt-2" viewBox="0 0 450 150">
@@ -41,7 +41,19 @@ const PopularCourse = () => {
         <div className=" ">
           {
             <Swiper
-              slidesPerView={3}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                },
+
+                1024: {
+                  slidesPerView: 3,
+                },
+
+                0: {
+                  slidesPerView: 1,
+                },
+              }}
               spaceBetween={30}
               navigation={true}
               modules={[Navigation]}
