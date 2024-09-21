@@ -5,7 +5,7 @@ const FeedBackCard = ({ fb, handleFeedBackCardClick }) => {
     <motion.div
       layoutId={fb.id}
       onClick={() => handleFeedBackCardClick(fb.id)}
-      className="h-60 w-72 border rounded-sm shadow-sm flex justify-center items-center"
+      className="h-60 lg:w-72 border rounded-sm shadow-sm flex justify-center items-center"
     >
       <motion.section className="  ">
         <motion.div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-12 lg:px-1">

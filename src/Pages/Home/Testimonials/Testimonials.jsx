@@ -22,7 +22,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 gap-10  mb-10 border">
+    <div className="grid grid-cols-1 w-full lg:grid-cols-4 gap-4 lg:gap-10 lg:mb-10">
       {feedBacks.map((fb) => (
         <FeedBackCard
           key={fb.id}
@@ -30,13 +30,6 @@ const Testimonials = () => {
           handleFeedBackCardClick={handleFeedBackCardClick}
         ></FeedBackCard>
       ))}
-
-      <AnimatePresence>
-        {selectedId && (
-          <ExpandedFeedBackCard fb={feedBacks.find((fb) => fb.id === selectedId)}
-          handleFeedBackCardClose={handleFeedBackCardClose}></ExpandedFeedBackCard>
-        )}
-      </AnimatePresence>
     </div>
   );
 };
