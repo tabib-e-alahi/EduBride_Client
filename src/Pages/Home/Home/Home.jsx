@@ -13,7 +13,7 @@ const Home = () => {
         <title>EduBridge | Home</title>
       </Helmet>
       <Banner></Banner>
-      <div className="max-w-6xl mx-auto space-y-16">
+      <div className="w-11/12 lg:max-w-6xl mx-auto space-y-16">
         <PopularCourse></PopularCourse>
         <OurPartners></OurPartners>
         <BecomeInstructor></BecomeInstructor>
