@@ -1,6 +1,6 @@
 const Newsletter = () => {
   return (
-    <div className="max-w-6xl py-10 mx-auto  grid  grid-cols-1   lg:grid-cols-2">
+    <div className="w-11/12 lg:max-w-6xl py-10 mx-auto grid grid-cols-1  lg:grid-cols-2 gap-y-10 lg:gap-y-6">
       <div className="flex flex-col justify-center items-start mx-auto">
         <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
           Subscribe to our newsletter.
@@ -29,7 +29,7 @@ const Newsletter = () => {
           </button>
         </div>
       </div>
-      <form className="space-y-4 mx-auto">
+      <form className="space-y-4 mx-auto w-full">
         <div>
           <label
             htmlFor="email"
@@ -40,7 +40,7 @@ const Newsletter = () => {
           <input
             type="email"
             name="email"
-            className="w-96 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+            className="w-full lg:w-96 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
             placeholder="name@email.com"
             required
           />
@@ -55,7 +55,7 @@ const Newsletter = () => {
           <input
             type="text"
             name="from_name"
-            className="w-96 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+            className="w-full lg:w-96 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
             placeholder="Let me know how I can help you"
             required
           />
@@ -70,7 +70,7 @@ const Newsletter = () => {
           <textarea
             name="message"
             rows={6}
-            className="w-96 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+            className="w-full lg:w-96 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
             placeholder="Leave a message..."
             defaultValue={""}
           />
