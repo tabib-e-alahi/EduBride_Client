@@ -79,7 +79,7 @@ const StatsSection = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2 xl:w-3/5 bg-gray-800 dark:bg-gray-100">
+        <div className="hidden lg:w-1/2 xl:w-3/5 bg-gray-800 dark:bg-gray-100">
           <div className="flex items-center justify-center p-4 md:p-8 lg:p-12">
             <img
               src="https://source.unsplash.com/640x480/"
