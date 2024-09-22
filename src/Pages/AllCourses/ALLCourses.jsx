@@ -36,11 +36,11 @@ const ALLCourses = () => {
 
 
   return (
-    <div className="py-24 border-2  border-green-600 max-w-7xl mx-auto ">
+    <div className=" w-10/12 lg:py-24  lg:max-w-7xl mx-auto ">
       <RouterLocation routeInfo={location?.pathname}></RouterLocation>
       <h1 className="text-4xl font-bold  text-center">This is All Courses</h1>
 
-      <div className="w-11/12 grid grid-cols-4  mx-auto  mt-10 gap-5">
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  lg:mt-10 gap-y-10 lg:gap-y-0 lg:gap-5">
         {/* =========== category section ======================= */}
         <section className="max-w-full shadow-sm h-fit bg-white rounded-xl flex flex-col items-start justify-center p-4">
           {uniqueCategories.map((uniCat, idx) => (
@@ -65,7 +65,7 @@ const ALLCourses = () => {
           ))}
         </section>
         {/* =============courses seection============  */}
-        <section className="col-span-3 grid grid-cols-3 gap-5">
+        <section className="lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-y-10 lg:gap-y-0 lg:gap-5">
           {filteredCourses?.map((course, idx) => (
             <Course key={idx} course={course}></Course>
           ))}

@@ -18,7 +18,7 @@ const Course = ({ course }) => {
 
   // console.log(course?.lectures);
   return (
-    <div className="max-w-sm h-[380px] shadow-sm rounded-lg  flex flex-col justify-between noto-sans-font">
+    <div className="max-w-sm h-[400px] lg:h-[380px] shadow-sm rounded-lg  flex flex-col justify-between noto-sans-font">
       <img className="rounded-t-xl h-40" src={cover_image} alt="" />
       <div className="bg-[#F9F9FA] py-3 px-2 text-sm font-semibold border-x border-gray-300 flex justify-between ">
         <span className="rounded-3xl ">Duration: {course_duration}hr</span>
