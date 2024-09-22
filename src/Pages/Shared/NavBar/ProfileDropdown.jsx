@@ -3,7 +3,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 
 
 const ProfileDropdown = () => {
-  const {logOut} = useContext(AuthContext);
+  const {user,logOut} = useContext(AuthContext);
 
 
   const handleLogOut = () => {
@@ -13,15 +13,15 @@ const ProfileDropdown = () => {
   };
 
   return (
-    <div className=" h-full p-3 space-y-2 w-60 bg-gray-900 dark:bg-gray-200 text-gray-100 dark:text-gray-800">
+    <div className=" h-full p-3 space-y-2 w-max bg-white">
       <div className="flex items-center p-2 space-x-4">
         <img
-          src="https://source.unsplash.com/100x100/?portrait"
-          alt=""
+          src={user?.photoURL}
+          alt="Profile"
           className="w-12 h-12 rounded-full bg-gray-500 dark:bg-gray-500"
         />
         <div>
-          <h2 className="text-lg font-semibold">Leroy Jenkins</h2>
+          <h2 className="text-lg font-semibold">{user?.displayName}</h2>
           <span className="flex items-center space-x-1">
             <a
               rel="noopener noreferrer"
