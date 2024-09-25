@@ -5,6 +5,7 @@ import ALLCourses from "../Pages/AllCourses/ALLCourses";
 import Login from "../Pages/Authentication/Login/Login";
 import SignUp from "../Pages/Authentication/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import CourseDetails from "../Pages/CourseDetails/CourseDetails";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
         {
           path: '/allCourses',
           element: <PrivateRoute><ALLCourses></ALLCourses></PrivateRoute>
+        },
+        {
+          path: '/course/:id',
+          element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>
         },
     ]
   },

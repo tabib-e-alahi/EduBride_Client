@@ -38,24 +38,25 @@ const ALLCourses = () => {
       {isLoading ? (
         <PageLoader></PageLoader>
       ) : (
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  lg:mt-10 gap-y-10 lg:gap-y-0 lg:gap-5">
+        <div className=" grid grid-cols-1 md:grid-cols-3  lg:grid-cols-4  lg:mt-10 gap-y-10 lg:gap-y-0 lg:gap-8">
           {/* =========== category section ======================= */}
-          <section className="max-w-full shadow-sm h-fit bg-white rounded-xl flex flex-col items-start justify-center p-4">
+          <section className="max-w-full shadow-sm h-fit p-8 pt-10 bg-[#F9F9FB] rounded-xl flex flex-col items-start justify-center">
+            <h1 className="text-2xl font-semibold mb-6">Categories:</h1>
             {uniqueCategories.map((uniCat, idx) => (
               <div
                 key={idx}
-                className="flex justify-center items-center text-left  mb-4"
+                className="flex justify-center items-center text-left   mb-4"
               >
                 <input
                   id="default-checkbox"
                   type="checkbox"
                   defaultValue
                   onChange={() => handleCheckboxChange(uniCat)}
-                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="size-5 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   htmlFor="default-checkbox"
-                  className="ms-2 text-sm font-medium text-gray-900"
+                  className="ms-3 text-lg  font-light text-black"
                 >
                   {uniCat}
                 </label>
@@ -63,7 +64,7 @@ const ALLCourses = () => {
             ))}
           </section>
           {/* =============courses seection============  */}
-          <section className="lg:col-span-3 grid grid-cols-1 lg:grid-cols-3 gap-y-10 lg:gap-y-8 lg:gap-5">
+          <section className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 lg:gap-y-8 lg:gap-5">
             {filteredCourses?.map((course, idx) => (
               <Course key={idx} course={course}></Course>
             ))}
