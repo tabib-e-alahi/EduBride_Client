@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import getRandomColor from "../../../utils/randomColor";
 
 const SocialLogin = () => {
   const { googleSignIn } = useContext(AuthContext);
@@ -16,10 +17,12 @@ const SocialLogin = () => {
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
       const { user } = result;
+      const randomColor = getRandomColor();
       const userInfo = {
         email: user?.email,
         name: user?.displayName,
         profile_photo: user?.photoURL,
+        profile_color: randomColor
       };
       console.log(userInfo);
       axiosPublic.post("/users", userInfo).then((res) => {

@@ -22,15 +22,16 @@ const Main = () => {
 
   return (
     <>
-    {
-      loaderState ? <PageLoader></PageLoader>:
-      <div className="transition-opacity ease-in-out duration-1000">
-      {/* {onlyHomePage && <Promotion></Promotion>} */}
-      {noHeaderFooter || <NavBar></NavBar>}
-      <Outlet></Outlet>
-      {noHeaderFooter || <Footer></Footer>}
-    </div>
-    }
+      {loaderState ? (
+        <PageLoader></PageLoader>
+      ) : (
+        <div className="transition-opacity ease-in-out duration-1000">
+          {/* {onlyHomePage && <Promotion></Promotion>} */}
+          {noHeaderFooter || <NavBar></NavBar>}
+          <Outlet></Outlet>
+          {noHeaderFooter || <Footer></Footer>}
+        </div>
+      )}
     </>
   );
 };

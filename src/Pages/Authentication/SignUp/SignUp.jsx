@@ -8,6 +8,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import "./SignUp.css";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
+import getRandomColor from "../../../utils/randomColor";
 
 const SignUp = () => {
   const [passShow, setPassShow] = useState(false);
@@ -30,9 +31,11 @@ const SignUp = () => {
       updateUserProfile(data?.name)
         .then(() => {
           console.log("User profile Updated");
+          const randomColor = getRandomColor();
           const userInfo = {
             email: data?.email,
             name: data?.name,
+            profile_color: randomColor,
           };
           axiosPublic.post("/users", userInfo).then((res) => {
             console.log(res.data);

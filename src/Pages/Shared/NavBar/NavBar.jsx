@@ -4,11 +4,13 @@ import { Link, NavLink } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import ProfileDropdown from "./ProfileDropdown";
+import useCurrentUser from "../../../hooks/useCurrentUser";
 
 const NavBar = () => {
   const { user } = useContext(AuthContext);
-
+  const [current_user] = useCurrentUser();
   const [isScrolled, setIsScrolled] = useState(false);
+  console.log(current_user.profile_color);
 
   // ================== navar scroll event handling funtions =================
   const handleScroll = () => {
@@ -82,8 +84,7 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="navbar-end space-x-4">
-
-          <div className="dropdown dropdown-bottom dropdown-end">
+            <div className="dropdown dropdown-bottom dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -112,21 +113,20 @@ const NavBar = () => {
               </ul>
             </div>
 
-
             <div className="hidden lg:flex">
               {user ? (
                 <details className="dropdown dropdown-bottom dropdown-end ">
-                  {user?.photoURL ? (
+                  {current_user?.profile_photo ? (
                     <summary className="btn bg-transparent hover:bg-transparent">
                       <img
                         alt="Profile Image"
-                        className=" w-10 h-10 rounded-full    dark:ring-violet-600 "
-                        src={user?.photoURL}
+                        className=" w-10 h-10 rounded-full dark:ring-violet-600 "
+                        src={current_user?.profile_photo}
                       />
                     </summary>
                   ) : (
-                    <summary className="btn hover:bg-[#f60] size-12 flex justify-center items-center text-xl font-bold text-white rounded-full  bg-[#f60]">
-                      {user?.displayName[0]}
+                    <summary className={`btn hover:bg-[${current_user?.profile_color}]  size-12 flex justify-center items-center text-xl font-bold text-white rounded-full bg-[${current_user?.profile_color}]`}>
+                      {user?.displayName[0]?.toUpperCase()}
                     </summary>
                   )}
                   <ul className="menu  dropdown-content  z-10   ">
