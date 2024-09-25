@@ -1,19 +1,22 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Footer from "../Pages/Shared/Footer/Footer";
 import NavBar from "../Pages/Shared/NavBar/NavBar";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import PageLoader from "../Pages/Shared/PageLoader/PageLoader";
+import useCurrentUser from "../hooks/useCurrentUser";
 
 const Main = () => {
-  const [loaderState, setLoaderState] = useState(true);
+  // const [loaderState, setLoaderState] = useState(true);
+  const [current_user,isLoading] = useCurrentUser();
+  console.log(isLoading)
 
-  useEffect(() => {
-    const loaderTimer = setTimeout(() => {
-      setLoaderState(false);
-    }, 1000);
+  // useEffect(() => {
+  //   const loaderTimer = setTimeout(() => {
+  //     setLoaderState(false);
+  //   }, 1000);
 
-    return () => clearTimeout(loaderTimer);
-  }, []);
+  //   return () => clearTimeout(loaderTimer);
+  // }, []);
 
   const location = useLocation();
   const noHeaderFooter =
@@ -22,7 +25,7 @@ const Main = () => {
 
   return (
     <>
-      {loaderState ? (
+      {isLoading ? (
         <PageLoader></PageLoader>
       ) : (
         <div className="transition-opacity ease-in-out duration-1000">

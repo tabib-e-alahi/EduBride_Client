@@ -8,8 +8,9 @@ import useCurrentUser from "../../../hooks/useCurrentUser";
 
 const NavBar = () => {
   const { user } = useContext(AuthContext);
-  const [current_user] = useCurrentUser();
+  const [current_user, isLoading] = useCurrentUser();
   const [isScrolled, setIsScrolled] = useState(false);
+  // console.log(isLoading)
   console.log(current_user.profile_color);
 
   // ================== navar scroll event handling funtions =================
@@ -125,7 +126,9 @@ const NavBar = () => {
                       />
                     </summary>
                   ) : (
-                    <summary className={`btn hover:bg-[${current_user?.profile_color}]  size-12 flex justify-center items-center text-xl font-bold text-white rounded-full bg-[${current_user?.profile_color}]`}>
+                    <summary
+                      className={`size-12 cursor-pointer flex justify-center items-center text-xl font-bold text-white rounded-full bg-[${current_user?.profile_color}]`}
+                    >
                       {user?.displayName[0]?.toUpperCase()}
                     </summary>
                   )}
