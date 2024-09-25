@@ -2,7 +2,7 @@ import logo_black  from '../../../assets/logo_black.png'
 
 const Footer = () => {
   return (
-    <div>
+    <div className=''>
       <footer className="footer bg-[#F3F7FF] text-base-content p-10 mt-14">
         <nav>
           <h6 className="footer-title">Services</h6>
