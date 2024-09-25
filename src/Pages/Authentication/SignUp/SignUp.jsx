@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import "./SignUp.css";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const SignUp = () => {
   const [passShow, setPassShow] = useState(false);
@@ -18,6 +19,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -28,15 +30,24 @@ const SignUp = () => {
       updateUserProfile(data?.name)
         .then(() => {
           console.log("User profile Updated");
-          reset();
-          Swal.fire({
-            position: "center",
-            icon: "success",
-            title: `Welcomee to eduBridge '${data?.name.split(" ")[0]}'`,
-            showConfirmButton: false,
-            timer: 1500,
+          const userInfo = {
+            email: data?.email,
+            name: data?.name,
+          };
+          axiosPublic.post("/users", userInfo).then((res) => {
+            console.log(res.data);
+            if (res.data.insertedId) {
+              Swal.fire({
+                position: "center",
+                icon: "success",
+                title: `Welcomee to eduBridge '${data?.name.split(" ")[0]}'`,
+                showConfirmButton: false,
+                timer: 1500,
+              });
+              reset();
+              navigate("/");
+            }
           });
-          navigate("/");
         })
         .catch((errors) => {
           console.log(errors);
