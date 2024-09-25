@@ -9,7 +9,7 @@ const ALLCourses = () => {
   const [checkedCategories, setCheckedCategories] = useState([]);
   const location = useLocation();
 
-  const [courses, isLoading] = useAllCourses();
+  const [courses, isLoading] = useAllCourses(); // retrieving all courses with useAllCourses hook
   console.log(isLoading);
 
   const uniqueCategories = [

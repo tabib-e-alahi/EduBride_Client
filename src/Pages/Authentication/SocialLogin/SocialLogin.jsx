@@ -3,23 +3,31 @@ import facebook from "../../../assets/facebook.png";
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 const SocialLogin = () => {
-  const {googleSignIn} = useContext(AuthContext);
+  const { googleSignIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
 
   const from = location?.state?.from?.pathname || "/";
 
   const handleGoogleSignIn = () => {
-    googleSignIn()
-    .then((result) =>{
-      console.log(result.user);
-      navigate(from, { replace: true });
-    })
+    googleSignIn().then((result) => {
+      const { user } = result;
+      const userInfo = {
+        email: user?.email,
+        name: user?.displayName,
+        profile_photo: user?.photoURL,
+      };
+      console.log(userInfo);
+      axiosPublic.post("/users", userInfo).then((res) => {
+        console.log(res.data);
+        navigate(from, { replace: true });
+      });
+    });
   };
-
-
 
   return (
     <div className="flex flex-col justify-center gap-2">
