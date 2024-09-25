@@ -5,12 +5,10 @@
   font-optical-sizing: inherit;
   font-weight: 500;
   font-style: normal;
-  /* font-variation-settings: "wdth" 100; */
 }
 
 .nav_width {
   width: 98%;
-  /* align-items: flex-c; */
 }
 
 .navOptions,
