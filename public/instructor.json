@@ -1,0 +1,135 @@
+[
+    {
+      "instructor_name": "Instructor One",
+      "instructor_email": "instructor1@example.com",
+      "profile_photo": "https://example.com/photos/instructor1.jpg",
+      "designation": "Senior full stack web developer",
+      "about_me": "Passionate about teaching and mentoring students in computer science.",
+      "current_edu_level": "PhD in Computer Science",
+      "expert_field": "Full stack web development",
+      "employment": "Tech Ventures Ltd",
+      "portfolio_link": "https://portfolio1.example.com"
+    },
+    {
+      "instructor_name": "Instructor Two",
+      "instructor_email": "instructor2@example.com",
+      "profile_photo": "https://example.com/photos/instructor2.jpg",
+      "designation": "Assistant Professor",
+      "about_me": "Dedicated educator with a focus on software engineering.",
+      "current_edu_level": "Master's in Software Engineering",
+      "expert_field": "Software Development",
+      "employment": "Engineering College",
+      "portfolio_link": "https://portfolio2.example.com"
+    },
+    {
+      "instructor_name": "Instructor Three",
+      "instructor_email": "instructor3@example.com",
+      "profile_photo": "https://example.com/photos/instructor3.jpg",
+      "designation": "Lead Instructor",
+      "about_me": "Enthusiastic about empowering students to excel in programming.",
+      "current_edu_level": "Master's in Computer Science",
+      "expert_field": "Web Development",
+      "employment": "Code Academy",
+      "portfolio_link": "https://portfolio3.example.com"
+    },
+    {
+      "instructor_name": "Instructor Four",
+      "instructor_email": "instructor4@example.com",
+      "profile_photo": "https://example.com/photos/instructor4.jpg",
+      "designation": "Senior Instructor",
+      "about_me": "Experienced in guiding students through data science projects.",
+      "current_edu_level": "PhD in Data Science",
+      "expert_field": "Data Analysis",
+      "employment": "Data Institute",
+      "portfolio_link": "https://portfolio4.example.com"
+    },
+    {
+      "instructor_name": "Instructor Five",
+      "instructor_email": "instructor5@example.com",
+      "profile_photo": "https://example.com/photos/instructor5.jpg",
+      "designation": "Adjunct Instructor",
+      "about_me": "Committed to fostering a collaborative learning environment.",
+      "current_edu_level": "Master's in Information Technology",
+      "expert_field": "Cloud Computing",
+      "employment": "IT College",
+      "portfolio_link": "https://portfolio5.example.com"
+    },
+    {
+      "instructor_name": "Instructor Six",
+      "instructor_email": "instructor6@example.com",
+      "profile_photo": "https://example.com/photos/instructor6.jpg",
+      "designation": "Head of Department",
+      "about_me": "Strives to inspire students in their academic journey.",
+      "current_edu_level": "PhD in Cybersecurity",
+      "expert_field": "Cybersecurity",
+      "employment": "Cyber University",
+      "portfolio_link": "https://portfolio6.example.com"
+    },
+    {
+      "instructor_name": "Instructor Seven",
+      "instructor_email": "instructor7@example.com",
+      "profile_photo": "https://example.com/photos/instructor7.jpg",
+      "designation": "Lecturer",
+      "about_me": "Specializes in teaching mobile application development.",
+      "current_edu_level": "Master's in Mobile Computing",
+      "expert_field": "Mobile Development",
+      "employment": "Mobile Academy",
+      "portfolio_link": "https://portfolio7.example.com"
+    },
+    {
+      "instructor_name": "Instructor Eight",
+      "instructor_email": "instructor8@example.com",
+      "profile_photo": "https://example.com/photos/instructor8.jpg",
+      "designation": "Research Fellow",
+      "about_me": "Passionate about research and innovation in software.",
+      "current_edu_level": "PhD in Software Engineering",
+      "expert_field": "Software Architecture",
+      "employment": "Innovation Lab",
+      "portfolio_link": "https://portfolio8.example.com"
+    },
+    {
+      "instructor_name": "Instructor Nine",
+      "instructor_email": "instructor9@example.com",
+      "profile_photo": "https://example.com/photos/instructor9.jpg",
+      "designation": "Program Coordinator",
+      "about_me": "Focused on curriculum development and student engagement.",
+      "current_edu_level": "Master's in Educational Technology",
+      "expert_field": "Educational Technology",
+      "employment": "Tech Education Center",
+      "portfolio_link": "https://portfolio9.example.com"
+    },
+    {
+      "instructor_name": "Instructor Ten",
+      "instructor_email": "instructor10@example.com",
+      "profile_photo": "https://example.com/photos/instructor10.jpg",
+      "designation": "Senior Consultant",
+      "about_me": "Advising students on industry practices and career paths.",
+      "current_edu_level": "MBA in Business Administration",
+      "expert_field": "Business Analytics",
+      "employment": "Consulting Firm",
+      "portfolio_link": "https://portfolio10.example.com"
+    },
+    {
+      "instructor_name": "Instructor Eleven",
+      "instructor_email": "instructor11@example.com",
+      "profile_photo": "https://example.com/photos/instructor11.jpg",
+      "designation": "Guest Lecturer",
+      "about_me": "Bringing real-world experience to the classroom.",
+      "current_edu_level": "PhD in Marketing",
+      "expert_field": "Digital Marketing",
+      "employment": "Marketing Agency",
+      "portfolio_link": "https://portfolio11.example.com"
+    },
+    {
+      "instructor_name": "Instructor Twelve",
+      "instructor_email": "instructor12@example.com",
+      "profile_photo": "https://example.com/photos/instructor12.jpg",
+      "designation": "Teaching Assistant",
+      "about_me": "Supporting faculty and students in their learning endeavors.",
+      "current_edu_level": "Master's in Education",
+      "expert_field": "Pedagogy",
+      "employment": "Education Department",
+      "portfolio_link": "https://portfolio12.example.com"
+    }
+  ]
+  
