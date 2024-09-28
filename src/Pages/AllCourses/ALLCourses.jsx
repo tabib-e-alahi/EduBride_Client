@@ -31,10 +31,16 @@ const ALLCourses = () => {
     ? courses.filter((course) => checkedCategories.includes(course.category))
     : courses;
 
+   const pageTitle = <>
+   <h1 className="text-white font-bold text-center text-4xl xl:text-5xl">
+        Our <br />
+        <span className="text-indigo-400"> Online Courses</span>
+      </h1></> 
+
   return (
     <div className=" w-10/12 lg:py-24  lg:max-w-7xl mx-auto ">
       {/* <RouterLocation routeInfo={location?.pathname}></RouterLocation> */}
-      <AllCourseBanner></AllCourseBanner>
+      <AllCourseBanner pageTitle={pageTitle} ></AllCourseBanner>
       {isLoading ? (
         <PageLoader></PageLoader>
       ) : (
