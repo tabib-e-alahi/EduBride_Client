@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import Course from "./Course";
 import useAllCourses from "../../hooks/useAllCourses";
 import PageLoader from "../Shared/PageLoader/PageLoader";
+import AllCourseBanner from "./AllCourseBanner";
 
 const ALLCourses = () => {
   const [checkedCategories, setCheckedCategories] = useState([]);
@@ -33,6 +34,7 @@ const ALLCourses = () => {
   return (
     <div className=" w-10/12 lg:py-24  lg:max-w-7xl mx-auto ">
       <RouterLocation routeInfo={location?.pathname}></RouterLocation>
+      <AllCourseBanner></AllCourseBanner>
       <h1 className="text-4xl font-bold  text-center">This is All Courses</h1>
 
       {isLoading ? (
