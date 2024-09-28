@@ -22,7 +22,7 @@ const Course = ({ course }) => {
 
   // console.log(course?.lectures);
   return (
-    <div className="h-[440px] p-4 overflow-hidden border bg-white shadow-sm rounded-3xl flex flex-col justify-between group">
+    <div className="h-[440px] p-4 overflow-hidden  shadow-inner shadow-gray-200 rounded-2xl flex flex-col justify-between group">
       <div className="flex flex-col h-full">
         {/* Top section (Author) */}
         <div className="flex items-center gap-2 mb-3 pl-4">
