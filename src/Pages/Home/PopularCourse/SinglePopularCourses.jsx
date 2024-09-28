@@ -33,6 +33,7 @@ const SinglePopularCourses = ({ p }) => {
           <img
             className="rounded-full size-8 border border-indigo-400"
             src={image}
+            loading="lazy"
             alt="author"
           />
           <p className="font-medium text-gray-800">Yet to be announced</p>
@@ -42,6 +43,7 @@ const SinglePopularCourses = ({ p }) => {
         <img
           className="rounded-lg mb-2 w-full h-48 object-cover transition-transform duration-700"
           src={image}
+          loading="lazy"
           alt="course"
         />
 

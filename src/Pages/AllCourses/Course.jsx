@@ -38,6 +38,7 @@ const Course = ({ course }) => {
         <img
           className="rounded-lg mb-2 w-full h-36 object-cover transition-transform duration-1000"
           src={cover_image}
+          loading="lazy"
           alt="course"
         />
 

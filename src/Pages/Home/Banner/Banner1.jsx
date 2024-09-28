@@ -28,7 +28,12 @@ const Banner1 = () => {
             </div>
           </div>
           <div className=" order-first lg:order-last lg:mt-0   justify-end animate__animated animate__fadeInRight animate__slow">
-            <img className="h-full w-full" src={banner_image} alt="hero image" />
+            <img
+              className="h-full w-full"
+              src={banner_image}
+              loading="lazy"
+              alt="hero image"
+            />
           </div>
         </div>
       </section>
