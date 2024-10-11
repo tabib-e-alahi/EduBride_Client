@@ -48,7 +48,7 @@ const SinglePopularCourses = ({ p }) => {
         />
 
         {/* Course details */}
-        <div className=" p-4 bg-white transition-transform duration-700 group-hover:translate-y-[-60px]">
+        <div className=" p-4 bg-white transition-transform duration-700 group-hover:translate-y-[-60px] hover:ease-in-out">
           <div className="badge mb-3 bg-[#EDF8F9] text-[#17A2B8] rounded-none py-2.5 text-xs px-2.5">
             {author}
           </div>

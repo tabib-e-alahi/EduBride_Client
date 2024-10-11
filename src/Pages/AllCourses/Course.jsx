@@ -43,7 +43,7 @@ const Course = ({ course }) => {
         />
 
         {/* Course details */}
-        <div className=" p-4 bg-white transition-transform duration-1000 group-hover:translate-y-[-60px]">
+        <div className=" p-4 bg-white transition-transform duration-1000 group-hover:translate-y-[-60px] hover:ease-in-out">
           <div className="badge mb-2 bg-[#EDF8F9] text-[#17A2B8] rounded-none py-2.5 text-xs px-2.5">
             {category}
           </div>

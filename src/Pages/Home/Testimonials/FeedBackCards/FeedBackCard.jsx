@@ -1,7 +1,7 @@
-const FeedBackCard = ({ fb }) => {
+const FeedBackCard = ({ fb, scaleStyle,idx }) => {
   return (
-    <div className="carousel__cell h-60 lg:w-72 border rounded-sm shadow-sm flex justify-center items-center">
-      <section className="  ">
+    <div className="keen-slider__slide zoom-out__slide  h-60 lg:w-72 border rounded-sm shadow-sm flex justify-center items-center">
+      <section style={scaleStyle(idx)} className="  ">
         <div className="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-12 lg:px-1">
           <figure className="max-w-screen-md mx-auto">
             <blockquote>

@@ -4,7 +4,7 @@ import Newsletter from "../Newsletter/Newsletter";
 import OurPartners from "../OurPartners/OurPartners";
 import PopularCourse from "../PopularCourse/PopularCourse";
 import { Helmet } from "react-helmet-async";
-import Testimonials from "../Testimonials/Testimonials";
+// import Testimonials from "../Testimonials/Testimonials";
 import StatsSection from "../StatsSection/StatsSection";
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
         <PopularCourse></PopularCourse>
         <OurPartners></OurPartners>
         <BecomeInstructor></BecomeInstructor>
-        <Testimonials></Testimonials>
+        {/* <Testimonials></Testimonials> */}
         <StatsSection></StatsSection>
       </div>
       <div className="bg-[#6538be]">

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import FeedBackCard from "./FeedBackCards/FeedBackCard";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import KeenSlider from "keen-slider";
+import { useKeenSlider } from "keen-slider/react"
 
 const carousel = (slider) => {
   const z = 300;
@@ -21,40 +22,57 @@ const carousel = (slider) => {
 
 const Testimonials = () => {
   const [feedBacks, setFeedBacks] = useState([]);
+  const [details, setDetails] = useState(null);
 
   useEffect(() => {
     fetch("./feedback.json")
       .then((res) => res.json())
       .then((data) => setFeedBacks(data));
   }, []);
+  const images = [
+    "https://images.unsplash.com/photo-1590004953392-5aba2e72269a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "https://images.unsplash.com/photo-1590004845575-cc18b13d1d0a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "https://images.unsplash.com/photo-1590004987778-bece5c9adab6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+    "https://images.unsplash.com/photo-1590005176489-db2e714711fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=500&w=800&q=80",
+  ];
 
-  const [sliderRef] = useKeenSlider(
-    {
-      loop: true,
-      selector: ".carousel__cell",
-      renderMode: "custom",
-      mode: "free-snap",
+  
+
+  const [sliderRef] = useKeenSlider({
+    loop: true,
+    detailsChanged(s) {
+      setDetails(s.track.details);
     },
-    [carousel]
-  );
+    initial: 2,
+  });
+
+  function scaleStyle(idx) {
+    if (!details) return {};
+    const slide = details.slides[idx];
+    const scale_size = 0.7;
+    const scale = 1 - (scale_size - scale_size * slide.portion);
+    return {
+      transform: `scale(${scale})`,
+      WebkitTransform: `scale(${scale})`,
+    };
+  }
 
   return (
-    <div className="wrapper ">
-      <div className="scene">
-        <div className="carousel keen-slider" ref={sliderRef}>
-          {/* <div className="carousel__cell number-slide1 ">1</div>
-         <div className="carousel__cell number-slide2">2</div>
-         <div className="carousel__cell number-slide3">3</div>
-         <div className="carousel__cell number-slide4">4</div>
-         <div className="carousel__cell number-slide5">5</div>
-         <div className="carousel__cell number-slide6">6</div> */}
-          {feedBacks.map((fb) => (
-            <FeedBackCard
-              key={fb.id}
-              fb={fb}
-            ></FeedBackCard>
-          ))}
-        </div>
+    <div className="">
+      <div ref={sliderRef} className="keen-slider zoom-out grid grid-cols-3">
+        {feedBacks.map((fb,idx) => (
+          <FeedBackCard scaleStyle={scaleStyle} idx={idx} key={fb.id} fb={fb}></FeedBackCard>
+        ))}
+      </div>
+
+      <div ref={sliderRef} className="keen-slider zoom-out border border-red-500">
+        {images.map((src, idx) => (
+          <div key={idx} className="keen-slider__slide zoom-out__slide">
+            <div style={scaleStyle(idx)}>
+              <img src={src} />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
