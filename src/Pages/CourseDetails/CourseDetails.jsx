@@ -54,7 +54,7 @@ const CourseDetails = () => {
           <div className="mt-24">
             <AllCourseBanner pageTitle={pageTitle}></AllCourseBanner>
           </div>
-          <section className="grid grid-cols-3">
+          <section className="grid grid-cols-3 gap-x-10">
             <div className="col-span-2 space-y-10">
               <h1 className="text-4xl font-bold font-serif">{course_title}</h1>
               <p className="roboto-mono-font text-justify font-medium">
@@ -65,21 +65,43 @@ const CourseDetails = () => {
                 src={cover_image}
                 alt="course cover image"
               />
-              
             </div>
-            <div className="1">
-              <div className="card rounded-xl bg-base-100 w-96 ml-auto shadow-xl">
-                <figure>
-                  <img src={cover_image} alt="course cover image" />
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title">{course_title}</h2>
-                  <p></p>
-                  <div className="card-actions justify-between">
-                    <div className="text-[#4A6DB0] text-xl font-semibold">
-                      ${price}
+
+            <div className="h-fit relative">
+              <div className="card sticky z-10 h-full rounded-lg border border-[#4A6DB0]">
+                <div className="card-body ">
+                  <h1 className="text-xl font-bold mb-4">
+                    What you will learn from this course?
+                  </h1>
+                  <ul className="space-y-4 text-left text-gray-500 dark:text-gray-700">
+                    {course_learning?.map((learning) => (
+                      <li className="flex items-center space-x-3 rtl:space-x-reverse">
+                        <svg
+                          className="flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 16 12"
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M1 5.917 5.724 10.5 15 1.5"
+                          />
+                        </svg>
+                        <span>{learning}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="bg-gray-300 h-[1px] w-full my-4"></div>
+                  <div className="card-actions flex-col">
+                    <div className="text-[#4A6DB0] flex items-center justify-between w-full mb-4">
+                      <p className="w-full font-medium text-lg">Course Price:</p>
+                      <p className="font-bold text-2xl">${price}</p>
                     </div>
-                    <button className="enroll_btn_class">Enroll</button>
+                    <button className="enroll_btn_class">Enroll Now</button>
                   </div>
                 </div>
               </div>
