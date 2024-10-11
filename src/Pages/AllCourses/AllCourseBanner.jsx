@@ -7,7 +7,7 @@ const AllCourseBanner = ({ pageTitle }) => {
     { title: "Careers", path: "javascript:void(0)" },
   ];
   return (
-    <div className="bg-gray-800 mx-auto mb-16   px-4 items-center lg:flex justify-center py-20 md:px-8 rounded-xl">
+    <div className="bg-[#4A6DB0] mx-auto mb-16   px-4 items-center lg:flex justify-center py-20 md:px-8 rounded-xl">
       {pageTitle}
     </div>
   );
