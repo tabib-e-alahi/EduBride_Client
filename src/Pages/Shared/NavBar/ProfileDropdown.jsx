@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 const ProfileDropdown = () => {
@@ -85,9 +86,8 @@ const ProfileDropdown = () => {
             </a>
           </li>
           <li>
-            <a
-              rel="noopener noreferrer"
-              href="#"
+            <Link
+            to={`mycart/${user?.email}`}
               className="flex items-center p-2 space-x-3 rounded-md"
             >
               <svg
@@ -100,7 +100,7 @@ const ProfileDropdown = () => {
                 <path d="M272,196.659A56.223,56.223,0,0,0,309.659,159H416V127H309.659a55.991,55.991,0,0,0-107.318,0H96v32H202.341A56.223,56.223,0,0,0,240,196.659V463H136v32H376V463H272ZM232,143a24,24,0,1,1,24,24A24,24,0,0,1,232,143Z"></path>
               </svg>
               <span>Orders</span>
-            </a>
+            </Link>
           </li>
           <li>
             <a

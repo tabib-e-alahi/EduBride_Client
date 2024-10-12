@@ -6,6 +6,7 @@ import Login from "../Pages/Authentication/Login/Login";
 import SignUp from "../Pages/Authentication/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import CourseDetails from "../Pages/CourseDetails/CourseDetails";
+import MyCart from "../Pages/MyCart/MyCart";
 
 export const router = createBrowserRouter([
   {
@@ -26,11 +27,15 @@ export const router = createBrowserRouter([
         },
         {
           path: '/allCourses',
-          element: <PrivateRoute><ALLCourses></ALLCourses></PrivateRoute>
+          element: <ALLCourses></ALLCourses>
         },
         {
           path: '/course/:id',
-          element: <PrivateRoute><CourseDetails></CourseDetails></PrivateRoute>
+          element: <CourseDetails></CourseDetails>
+        },
+        {
+          path: '/mycart/:email',
+          element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
         },
     ]
   },

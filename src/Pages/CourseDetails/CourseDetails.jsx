@@ -1,12 +1,18 @@
-import { useParams } from "react-router-dom";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useQuery } from "@tanstack/react-query";
 import AllCourseBanner from "../AllCourses/AllCourseBanner";
 import "./CourseDetails.css";
 import PageLoader from "../Shared/PageLoader/PageLoader";
+import Swal from "sweetalert2";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const CourseDetails = () => {
+  const {user} = useContext(AuthContext);
   const { id } = useParams();
+  const navigate = useNavigate();
+  const location = useLocation();
   console.log(id);
 
   const axiosPublic = useAxiosPublic();
@@ -45,6 +51,29 @@ const CourseDetails = () => {
     </>
   );
 
+  const handleAddToCart = () =>{
+    console.log("Button triggered")
+    if(user && user.email)
+    {
+// send data to cart
+    }
+    else{
+      Swal.fire({
+        title: "You are not login",
+        text: "You have to login to add a course to the cart.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, Login"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate('/login', {state: {from: location}})
+        }
+      });
+    }
+  }
+
   return (
     <>
       {isLoading ? (
@@ -54,7 +83,7 @@ const CourseDetails = () => {
           <div className="mt-24">
             <AllCourseBanner pageTitle={pageTitle}></AllCourseBanner>
           </div>
-          <section className="grid grid-cols-3 gap-x-10">
+          <section className="grid grid-cols-3 gap-x-10 relative">
             <div className="col-span-2 space-y-10">
               <h1 className="text-4xl font-bold font-serif">{course_title}</h1>
               <p className="noto-sans-font text-justify line_class">
@@ -150,8 +179,8 @@ const CourseDetails = () => {
               </div>
             </div>
 
-            <div className="h-fit relative">
-              <div className="card sticky z-10 h-full rounded-lg border border-[#4A6DB0]">
+            <div className="h-fit sticky top-0">
+              <div className="card  h-full rounded-lg border border-[#4A6DB0]">
                 <div className="card-body ">
                   <h1 className="text-xl font-bold mb-4">
                     What you will learn from this course?
@@ -187,7 +216,7 @@ const CourseDetails = () => {
                       </p>
                       <p className="font-bold text-2xl">${price}</p>
                     </div>
-                    <button className="enroll_btn_class">Enroll Now</button>
+                    <button onClick={handleAddToCart} className="enroll_btn_class">Enroll Now</button>
                   </div>
                 </div>
               </div>
