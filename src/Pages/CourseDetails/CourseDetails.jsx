@@ -7,14 +7,15 @@ import PageLoader from "../Shared/PageLoader/PageLoader";
 import Swal from "sweetalert2";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const CourseDetails = () => {
-  const {user} = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const { id } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
   console.log(id);
-
+const axiosSecure = useAxiosSecure();
   const axiosPublic = useAxiosPublic();
   const { data: course = {}, isLoading } = useQuery({
     queryKey: ["course"],
@@ -27,6 +28,7 @@ const CourseDetails = () => {
   console.log(course);
 
   const {
+    _id,
     course_title,
     about_this_course,
     cover_image,
@@ -51,13 +53,28 @@ const CourseDetails = () => {
     </>
   );
 
-  const handleAddToCart = () =>{
-    console.log("Button triggered")
-    if(user && user.email)
-    {
-// send data to cart
-    }
-    else{
+  const handleAddToCart = () => {
+    console.log("Button triggered");
+    console.log(new Date().toLocaleTimeString());
+    console.log(new Date().toLocaleString());
+
+    console.log(new Date().toISOString()); // Gives the date and time in ISO format: YYYY-MM-DDTHH:mm:ss.sssZ
+
+    if (user && user.email) {
+      // send data to cart
+      const cartItem = {
+        courseId: _id,
+        userId: user.email,
+        timeAdded: new Date().toLocaleString(),
+      };
+      axiosSecure.post('/carts', cartItem)
+      .then(res =>{
+        if(res.data.insertedId){
+          alert('Data added to cart')
+        }
+      })
+
+    } else {
       Swal.fire({
         title: "You are not login",
         text: "You have to login to add a course to the cart.",
@@ -65,14 +82,14 @@ const CourseDetails = () => {
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, Login"
+        confirmButtonText: "Yes, Login",
       }).then((result) => {
         if (result.isConfirmed) {
-          navigate('/login', {state: {from: location}})
+          navigate("/login", { state: { from: location } });
         }
       });
     }
-  }
+  };
 
   return (
     <>
@@ -96,7 +113,9 @@ const CourseDetails = () => {
               />
               <div>
                 <div className="card h-full ">
-                  <h1 className="text-3xl font-bold mb-8 noto-sans-font">Course Materials</h1>
+                  <h1 className="text-3xl font-bold mb-8 noto-sans-font">
+                    Course Materials
+                  </h1>
                   <div className="card-body rounded-lg border border-[#4A6DB0]">
                     <ul className="noto-sans-font list_line_class grid grid-cols-2 gap-2 justify-between items-center text-left text-gray-500 dark:text-gray-700">
                       {course_materials?.map((material) => (
@@ -123,7 +142,9 @@ const CourseDetails = () => {
                   </div>
                 </div>
                 <div className="card h-full my-20">
-                  <h1 className="text-3xl font-bold mb-8 noto-sans-font">What you will learn from this course?</h1>
+                  <h1 className="text-3xl font-bold mb-8 noto-sans-font">
+                    What you will learn from this course?
+                  </h1>
                   <div className="card-body rounded-lg border border-[#4A6DB0]">
                     <ul className="noto-sans-font list_line_class grid grid-cols-2 gap-2 justify-between items-center text-left text-gray-500 dark:text-gray-700">
                       {course_learning?.map((learning) => (
@@ -150,7 +171,9 @@ const CourseDetails = () => {
                   </div>
                 </div>
                 <div className="card h-full ">
-                  <h1 className="text-3xl font-bold mb-8 noto-sans-font">Who the course is for</h1>
+                  <h1 className="text-3xl font-bold mb-8 noto-sans-font">
+                    Who the course is for
+                  </h1>
                   <div className="card-body rounded-lg border border-[#4A6DB0]">
                     <ul className="noto-sans-font  grid grid-cols-2 gap-4 justify-between items-center text-left text-gray-500 dark:text-gray-700">
                       {forWhome?.map((whome) => (
@@ -216,7 +239,12 @@ const CourseDetails = () => {
                       </p>
                       <p className="font-bold text-2xl">${price}</p>
                     </div>
-                    <button onClick={handleAddToCart} className="enroll_btn_class">Enroll Now</button>
+                    <button
+                      onClick={handleAddToCart}
+                      className="enroll_btn_class"
+                    >
+                      Enroll Now
+                    </button>
                   </div>
                 </div>
               </div>
