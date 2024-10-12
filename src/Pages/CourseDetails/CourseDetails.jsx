@@ -72,6 +72,12 @@ const axiosSecure = useAxiosSecure();
         if(res.data.insertedId){
           alert('Data added to cart')
         }
+        else{
+          Swal.fire({
+            icon: "error",
+            title: `${res.data.message}`,
+          });
+        }
       })
 
     } else {
