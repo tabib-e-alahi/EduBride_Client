@@ -18,4 +18,12 @@
     color: #4A6DB0;
     font-size: 1.4em;
   }
+
+  .line_class{
+    line-height: 35px;
+  }
+  .list_line_class{
+    
+    line-height: 24px;
+  }
   
