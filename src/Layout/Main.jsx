@@ -20,7 +20,7 @@ const Main = () => {
 
   const location = useLocation();
   const noHeaderFooter =
-    location.pathname.includes("login") || location.pathname.includes("signUp");
+    location.pathname.includes("login") || location.pathname.includes("signUp") || location.pathname.includes("dashboard");
   const onlyHomePage = location.pathname.includes("/");
 
   return (

@@ -44,8 +44,8 @@ const NavBar = () => {
         <NavLink to="/allCourses">Courses</NavLink>
       </li>
       <li className="navOptions">
-        <NavLink className=" " to="/courses">
-          Courses
+        <NavLink className=" " to="/dashboard">
+          Dashboard
         </NavLink>
       </li>
       <li className="navOptions">
@@ -116,7 +116,7 @@ const NavBar = () => {
               </ul>
             </div>
 
-            <div className="hidden lg:flex">
+            <div className="hidden lg:flex gap-4">
               {user ? (
                 <details className="dropdown dropdown-bottom dropdown-end ">
                   {current_user?.profile_photo ? (
